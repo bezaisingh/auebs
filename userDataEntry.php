@@ -33,7 +33,7 @@
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #4b5195;
   color: white;
 }
          </style>
@@ -90,40 +90,40 @@
 
     <div class="form">
       <h3>Enter User Details</h3>
-      <form action="">
+      <form action="queryFiles/addUser.php" method="POST">
         <p>
           <label for="">First Name</label>
-          <input type="text">
+          <input type="text" name="fname">
         </p>
           
            <p>
           <label for="">Last Name</label>
-          <input type="text">
+          <input type="text" name="lname">
         </p>
           
         <p>
           <label for="">Meter Number</label>
-          <input type="text">
+          <input type="text" name="mtrno">
         </p>
         <p>
           <label for="">Quarter Number</label>
-          <input type="text">
+          <input type="text" name="qtrno">
         </p>
           
            <p class="full-width">
           <label for="">Designation</label>
-          <input type="text">    
+          <input type="text" name="desig">    
          <!-- <textarea name="" id="" cols="30" rows="1"></textarea>-->
         </p>
           
         <p>
           <label for="">User Id</label>
-          <input type="text">
+          <input type="text" name="uid">
         </p>
           
             <p>
           <label for="">Password</label>
-          <input type="text">
+          <input type="text" name="pwd">
         </p>
           
        <!-- <p class="full-width">
@@ -132,7 +132,7 @@
         </p>-->
           
         <p class="full-width">
-          <button>Save</button>
+          <button type="submit" name="submit">Save</button>
         </p>
       </form>
     </div>

@@ -19,7 +19,7 @@
 		  /*For popup window and to redirect to login page*/
                 
              echo   '<script type="text/javascript"> 
-                        alert("review your answer"); 
+                        alert("Wrong Credentials.. Try again!!!"); 
                         window.location.href = "login.html";
                         </script>';
 			}

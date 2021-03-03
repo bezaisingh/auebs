@@ -33,7 +33,7 @@
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #4b5195;
   color: white;
 }
          </style>

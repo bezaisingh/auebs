@@ -1,46 +1,45 @@
 <?php
 include '../dbConn.php';
 
-echo "Connected hai bhau";
 
-/*if(isset($_POST["submit"]))
-{
-$Fname=$_POST["Fname"];
-$Mname=$_POST["Mname"];
-$Lname=$_POST["Lname"];
-$FatName=$_POST["FatName"];
-$MotName=$_POST["MotName"];
-$gender=$_POST["gender"];
-$DOB=$_POST["DOB"];
-$Addr=$_POST["Addr"];
-$Dist=$_POST["Dist"];
-$Pin=$_POST["Pin"];
-$Stt=$_POST["Stt"];
-$Country=$_POST["Country"];
-$MobNo=$_POST["MobNo"];
-$AltNo=$_POST["AltNo"];
-$emailID=$_POST["emailID"];
-$cemailID=$_POST["cemailID"];
-$pwd=$_POST["pwd"];
-$cpwd=$_POST["cpwd"];
 
-if($pwd==$cpwd)
+if(isset($_POST["submit"]))
 {
-    $sql="select * from register WHERE emailID='$emailID'";
-    $sqli_run=mysqli_query($conn,$sql);
     
-    if(mysqli_num_rows($sqli_run)>0)
-    {
-        echo"<script>alert('Email ID already exists')</script>";
-    }
-    else
-    {
+$Fname=$_POST["fname"];
 
-        $sql="INSERT INTO register(Fname, Mname, Lname, FatName, MotName, gender, DOB, Addr, Dist, Pin, Stt, Country, MobNo, AltNo, emailID, pwd) VALUES ('$Fname','$Mname','$Lname','$FatName','$MotName','$gender','$DOB','$Addr','$Dist','$Pin','$Stt','$Country','$MobNo','$AltNo','$emailID','$pwd')";
+$Lname=$_POST["lname"];
+
+$QtrNo=$_POST["qtrno"];
+
+$MtrNo=$_POST["mtrno"];
+
+$Desig=$_POST["desig"];
+
+$Uid=$_POST["uid"];
+
+$Pwd=$_POST["pwd"];
+
+
+    
+if(!empty($_POST['uid'])){
+    
+        $sql="select * from users_table WHERE uid='uid'";
+        $sqli_run=mysqli_query($conn,$sql);
+    
+        if(mysqli_num_rows($sqli_run)>0)
+        {
+        echo"<script>alert('Email ID already exists')</script>";
+        }
+    
+       else {
+    
+
+        $sql="INSERT INTO users_table(meter_no, qtr_no, fname, lname, designation, uid, pwd) VALUES ('$Fname','$Lname','$MtrNo','$QtrNo','$Desig','$Uid','$Pwd')";
             if($conn->query($sql)===TRUE)
                 {
                     echo"Record Inserted Successfully";
-                    header("location:form2.html");
+                    header("location:../userDataEntry.php");
                 }
                 else
                 {
@@ -48,11 +47,15 @@ if($pwd==$cpwd)
                 }
                    
     }
+     
+} 
+   
     mysqli_close($conn);
+   
 }
 else
 	{
 		echo "<script>alert('Password/Email Does not Match')</script>";
     }
-}*/
+   
 ?>
