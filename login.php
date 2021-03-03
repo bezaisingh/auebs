@@ -11,7 +11,7 @@
 			if(mysqli_num_rows($sqli_run)>0)
 			{
 				$_SESSION['uid']=$username;
-				header("location:billEntry.php");
+				header("location:home.php");
 			}
 			else
 			{               
@@ -20,7 +20,7 @@
                 
              echo   '<script type="text/javascript"> 
                         alert("Wrong Credentials.. Try again!!!"); 
-                        window.location.href = "login.html";
+                        window.location.href = "index.html";
                         </script>';
 			}
 				mysqli_close($conn);

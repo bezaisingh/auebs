@@ -35,7 +35,7 @@ if(!empty($_POST['uid'])){
        else {
     
 
-        $sql="INSERT INTO users_table(meter_no, qtr_no, fname, lname, designation, uid, pwd) VALUES ('$Fname','$Lname','$MtrNo','$QtrNo','$Desig','$Uid','$Pwd')";
+        $sql="INSERT INTO users_table(fname, lname, meter_no, qtr_no, designation, uid, pwd) VALUES ('$Fname','$Lname','$MtrNo','$QtrNo','$Desig','$Uid','$Pwd')";
             if($conn->query($sql)===TRUE)
                 {
                     echo"Record Inserted Successfully";
