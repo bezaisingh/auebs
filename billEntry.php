@@ -62,260 +62,260 @@
 
     <div class="form">
       <h3>Enter Bill Details</h3>
-      <form action="">
+      <form action="queryFiles/insertBillData.php" method="post">
         <p>
           <label for="">Consumer Name</label>
-          <input type="text">
+          <input type="text" name="consumerName">
         </p>          
                 
         <p>
           <label for="">Meter Number</label>
-          <input type="text">
+          <input type="number" name="mtrno">
         </p>
         <p>
           <label for="">Quarter Number</label>
-          <input type="text">
+          <input type="text" name="qtrno">
         </p>
           
          <p>
           <label for="">Designation</label>
-           <input type="text">  
+           <input type="text" name="desig">  
           </p>     
                
         <p>
           <label for="">Tariff Category</label>
-          <input type="text">
+          <input type="text" name="tariffCat">
         </p>
           
             <p>
           <label for="">Supply Voltage Level</label>
-          <input type="text">
+          <input type="text" name="supplyVoltLvl">
         </p>
           
             <p>
           <label for="">Connected Load</label>
-          <input type="text">
+          <input type="number" name="connectLoad">
         </p>
           
             <p>
           <label for="">Bill Amount</label>
-          <input type="text">
+          <input type="number" name="billAmt">
         </p>
           
             <p>
           <label for="">Bill Number</label>
-          <input type="text">
+          <input type="number" name="billNo">
         </p>
           
             <p>
           <label for="">Bill Period</label>
-          <input type="text">
+          <input type="text" name="billPeriod">
         </p>
           
             <p>
           <label for="">Bill Date</label>
-          <input type="text">
+          <input type="date" name="billDate">
         </p>
           
             <p>
-          <label for="">Numbser of Days</label>
-          <input type="text">
+          <label for="">Number of Days</label>
+          <input type="number" name="noOfDays">
         </p>
           
             <p>
           <label for="">Meter Status</label>
-          <input type="text">
+          <input type="text" name="mtrStatus">
         </p>
           
             <p>
           <label for="">Billing Status</label>
-          <input type="text">
+          <input type="text" name="billingStatus">
         </p>
           
             <p>
           <label for="">Address</label>
-          <input type="text">
+          <input type="text" name="address">
         </p>
           
             <p>
           <label for="">Reading Type</label>
-          <input type="text">
+          <input type="text" name="readingType">
         </p>
           
             <p>
           <label for="">Previous Reading</label>
-          <input type="text">
+          <input type="number" name="prevReading">
         </p>
           
             <p>
           <label for="">Current Reading</label>
-          <input type="text">
+          <input type="number" name="currentReading">
         </p>
           
             <p>
           <label for="">Difference in Reading</label>
-          <input type="text">
+          <input type="number" name="diffInReading">
         </p>
           
             <p>
           <label for="">Units Consumed</label>
-          <input type="text">
+          <input type="number" name="unitsConsumed">
         </p>
           
             <p>
           <label for="">Billable Units</label>
-          <input type="text">
+          <input type="number" name="billableUnits">
         </p>
           
             <p>
           <label for="">Recorded Demand</label>
-          <input type="text">
+          <input type="number" name="recordDemand">
         </p>
           
            <p>
           <label for="">Max Demand</label>
-          <input type="text">
+          <input type="number" name="maxDemand">
         </p>
           
           
           
            <p>
           <label for="">Billing Demand</label>
-          <input type="text">
+          <input type="number" name="billingDemad">
         </p>
           
            <p>
-          <label for="">Avserage Power Factor</label>
-          <input type="text">
+          <label for="">Average Power Factor</label>
+          <input type="number" name="avgPowFactor">
         </p>
           
            <p>
           <label for="">Power on Hours</label>
-          <input type="text">
+          <input type="number" name="powOnHrs">
         </p>
           
            <p>
           <label for="">Availability Percent</label>
-          <input type="text">
+          <input type="text" name="availPercent">
         </p>
           
            <p>
           <label for="">Current Demand</label>
-          <input type="text">
+          <input type="number" name="currentDemand">
         </p>
           
            <p>
           <label for="">Outstanding Demand</label>
-          <input type="text">
+          <input type="number" name="outstandingDemand">
         </p>
           
            <p>
           <label for="">Adjustment Amount</label>
-          <input type="text">
+          <input type="number" name="adjAmt">
         </p>
           
            <p>
           <label for="">Net Bill Amount</label>
-          <input type="text">
+          <input type="number" name="netBillAmt">
         </p>
           
            <p>
           <label for="">Net Bill Amount in Words</label>
-          <input type="text">
+          <input type="text" name="netBillInWords">
         </p>
           
              <p>
           <label for="">Rate</label>
-          <input type="text">
+          <input type="number" name="rate">
         </p>
           
           
              <p>
           <label for="">Energy Charge</label>
-          <input type="text">
+          <input type="number" name="energyCharge">
         </p>
           
           
              <p>
           <label for="">Total Energy Charge</label>
-          <input type="text">
+          <input type="number" name="totEnergyCharge">
         </p>
           
           
              <p>
           <label for="">Demand Fixed Charge</label>
-          <input type="text">
+          <input type="number" name="demandFixedCharge">
         </p>
           
           
              <p>
           <label for="">Electricity Duty</label>
-          <input type="text">
+          <input type="number" name="electricityDuty">
         </p>
           
           
              <p>
           <label for="">Meter Rent</label>
-          <input type="text">
+          <input type="number" name="mtrRent">
         </p>
           
           
              <p>
           <label for="">Arrear Principle</label>
-          <input type="text">
+          <input type="number" name="arrPrinciple">
         </p>
           
                   <p>
           <label for="">Arrear Surcharge</label>
-          <input type="text">
+          <input type="number" name="arrSurcharge">
         </p>
           
           
         <p>
           <label for="">Current Surcharge</label>
-          <input type="text">
+          <input type="number" name="currSurcharge">
         </p>
           
           
         <p>
           <label for="">Miscellaneous Arrear</label>
-          <input type="text">
+          <input type="number" name="miscArrear">
         </p>
           
           
         <p>
           <label for="">Payable Amount Before Due Date</label>
-          <input type="text">
+          <input type="number" name="payableAmtBfDueDate">
         </p>
           
           
                   <p>
           <label for="">Payable Amount After Due Date</label>
-          <input type="text">
+          <input type="number" name="payableAmtAfDueDate">
         </p>
           
           
                   <p>
           <label for="">Prepared by</label>
-          <input type="text">
+          <input type="text" name="prepBy">
         </p>
           
           
                   <p>
           <label for="">Consumer Category</label>
-          <input type="text">
+          <input type="text" name="consumerCat">
         </p>
           
           
                   <p>
           <label for="">Start Date</label>
-          <input type="text">
+          <input type="date" name="startDate">
         </p>
           
           
         <p>
           <label for="">End Date</label>
-          <input type="text">
+          <input type="date" name="endDate">
         </p>
           
           
@@ -326,7 +326,8 @@
         </p>-->
           
         <p class="full-width">
-          <button>Save</button>
+          <button value="save" name="save">Save</button>
+            
         </p>
       </form>
     </div>
@@ -334,7 +335,7 @@
 </div>
 <!--    Form ends here-->
 
-    
+    <!--Style for Footer-->
     <style>
 .footer {
   position: fixed;
@@ -346,10 +347,13 @@
   text-align: center;
 }
 </style>
-
+     <!--Style for Footer ends here-->
+    
+<!--Footer-->
 <div class="footer">
   <p>Copyright &copy AUEBS</p>
 </div>
+    <!--Footer ends-->
 
 </body>
 </html>
