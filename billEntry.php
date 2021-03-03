@@ -63,6 +63,29 @@
     <div class="form">
       <h3>Enter Bill Details</h3>
       <form action="queryFiles/insertBillData.php" method="post">
+          
+          
+                 <!-- /////////////////////////////////-->
+          <p>
+           <label for="">Meter Number</label>
+ <select>
+    <option disabled selected>-- Select Meter Number --</option>
+    <?php
+        include "dbConn.php";  // Using database connection file here
+        $records = mysqli_query($conn, "SELECT meter_no From users_table");  // Use select query here 
+
+        while($data = mysqli_fetch_array($records))
+        {
+            echo "<option value='". $data['meter_no'] ."'>" .$data['meter_no'] ."</option>";  // displaying data in option menu
+        }	
+    ?>  
+  </select>
+          
+          </p>
+
+          <!--////////////////////////////////-->
+          
+          
         <p>
           <label for="">Consumer Name</label>
           <input type="text" name="consumerName">
@@ -72,6 +95,7 @@
           <label for="">Meter Number</label>
           <input type="number" name="mtrno">
         </p>
+          
         <p>
           <label for="">Quarter Number</label>
           <input type="text" name="qtrno">

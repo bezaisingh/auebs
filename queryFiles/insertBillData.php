@@ -22,8 +22,7 @@ if(isset($_POST["save"]))
     $BillingStatus=$_POST["billingStatus"];    
     $Address=$_POST["address"];    
     $ReadingType=$_POST["readingType"];    
-    $PrevReading=$_POST["prevReading"];  
-    
+    $PrevReading=$_POST["prevReading"];      
     $CurrentReading=$_POST["currentReading"];    
     $DiffInReading=$_POST["diffInReading"];    
     $UnitsConsumed=$_POST["unitsConsumed"];    
