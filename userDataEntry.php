@@ -1,3 +1,4 @@
+
 <html>
 <body>
 
@@ -93,7 +94,7 @@
       <form action="queryFiles/addUser.php" method="POST">
         <p>
           <label for="">First Name</label>
-          <input type="text" name="fname">
+          <input type="name" name="fname">
         </p>
           
            <p>
@@ -103,17 +104,31 @@
           
         <p>
           <label for="">Meter Number</label>
-          <input type="text" name="mtrno">
+          <input type="number" name="mtrno">
         </p>
         <p>
           <label for="">Quarter Number</label>
           <input type="text" name="qtrno">
         </p>
           
-           <p class="full-width">
+           <p>
           <label for="">Designation</label>
           <input type="text" name="desig">    
-         <!-- <textarea name="" id="" cols="30" rows="1"></textarea>-->
+          </p>
+
+          <p>
+          <label for="">Department</label>
+          <input type="text" name="dept">    
+        </p>
+
+        <p>
+          <label for="">Mobile Number</label>
+          <input type="number" name="mobno">    
+        </p>
+
+        <p>
+          <label for="">Email Id</label>
+          <input type="text" name="email">    
         </p>
           
         <p>
