@@ -66,9 +66,13 @@
           
           
                  <!-- /////////////////////////////////-->
-          <p>
-           <label for="">Meter Number</label>
+      <p>
+           <label for="">Meter Number</label>   
+              
  <select>
+      
+          
+          
     <option disabled selected>-- Select Meter Number --</option>
     <?php
         include "dbConn.php";  // Using database connection file here
@@ -79,9 +83,11 @@
             echo "<option value='". $data['meter_no'] ."'>" .$data['meter_no'] ."</option>";  // displaying data in option menu
         }	
     ?>  
+          
+          
   </select>
           
-          </p>
+       <p>   
 
           <!--////////////////////////////////-->
           
@@ -91,12 +97,12 @@
           <input type="text" name="consumerName">
         </p>          
                 
-        <p>
+ <!--       <p>
           <label for="">Meter Number</label>
           <input type="number" name="mtrno">
         </p>
           
-        <p>
+ -->       <p>
           <label for="">Quarter Number</label>
           <input type="text" name="qtrno">
         </p>
