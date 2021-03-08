@@ -34,7 +34,7 @@ $conn->close();
 /*$conn=mysqli_connect('localhost', 'root', '', 'auebs');*/
 /*$res=mysqli_query($conn,"select * from bill table");*/
 
-/*if (!$res || mysqli_num_rows($res)== 0){    
+if (!$res || mysqli_num_rows($res)== 0){    
     
         $html='<table>';
         $html.='<style></style> <table class="#">';
@@ -59,7 +59,7 @@ $conn->close();
      
 } else {
         $html.='Data not Found';
-}*/
+}
 
 $mpdf= new \Mpdf\Mpdf();
 $mpdf->WriteHTML($html);

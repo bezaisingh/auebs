@@ -1,9 +1,32 @@
+<?php
+
+
+// turn on error reporting
+error_reporting(1);
+ini_set('error_reporting', E_ALL);
+
+// start session
+session_start();
+
+// debug session
+var_dump($_SESSION);
+
+echo $_SESSION["meter_no"];
+
+//The below codes just prints the session values
+/*echo '<br>';
+print_r($_SESSION);
+echo '<br>';
+echo("{$_SESSION['meter_no']}"."<br />");*/
+
+?>
+
 <html>
     <head>
 
         <title>AUEBS Login</title>
         
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="gridform.css">
         
     </head>
     
@@ -52,12 +75,16 @@ tr:nth-child(even) {background-color: #f2f2f2}
     
     /* To connect to db */
 include "dbConn.php";
+/*    echo $_SESSION["meter_no"];
+    echo '<br>';*/
+$meter_no= $_SESSION["meter_no"];
+    echo '<br>';
     
 $sql = "SELECT  meter_no,
                 qtr_no,
                 consumer_name,
                 unit_consumed, 
-                net_bill_amt_    FROM bill_table";
+                net_bill_amt_   FROM bill_table where meter_no='$meter_no'";
     
 $result = $conn->query($sql);
     
