@@ -7,8 +7,8 @@ if(isset($_POST["save"]))
 {
     
     $ConsumerName=$_POST["consumerName"];
-    $MtrNo=$_POST["mtrno"];
-    $QtrNo=$_POST["qtrno"];
+    $MtrNo=$_POST["mtrNo"];
+    $QtrNo=$_POST["qtrNo"];
     $Desig=$_POST["desig"];
     $TariffCat=$_POST["tariffCat"];
     $SupplyVoltLvl=$_POST["supplyVoltLvl"];    

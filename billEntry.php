@@ -1,11 +1,18 @@
 <html>
 <body>
+<!-- The lines are important for autofill feature -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- The lines are important for autofill feature ends here -->
 
     <div class="topnav">
-  <a class="active" href="#home">Home</a>
+  <a class="active" href="home.php">Home</a>
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
+  <a href="#logout">Logout</a>
 </div>
  
 <style>
@@ -37,7 +44,42 @@
   color: white;
 }
          </style>
-    
+
+
+<!-- javascript code for autofill     -->
+
+<script type="text/javascript">
+        $(document).ready(function() {
+            $('#meter_no').keyup(function() {
+                var sid = $(this).val();
+				//alert(sid);
+                var data_String = 'sid=' + sid;
+                $.get('queryFiles/autofill.php', data_String, function(result) {
+
+                    $.each(result, function(){
+                        $('#id').val(this.id);
+                        $('#meter_no').val(this.meter_no);
+                        $('#qtr_no').val(this.qtr_no);
+                         $('#fname').val(this.fname +' '+ this.lname) ;
+						             $('#lname').val(this.lname);
+					            	 $('#designation').val(this.designation);
+						             $('#dept').val(this.dept);
+                         $('#mob_no').val(this.mob_no);
+						             $('#email').val(this.email);
+					            
+                    });
+
+                    $consumerName= "Bijay";
+
+
+                });
+            });
+        });
+    </script>
+
+<!-- javascript code for autofill ends here -->
+
+
 
     
 <h1>Bill Data Entry Form!</h1>
@@ -65,56 +107,62 @@
       <form action="queryFiles/insertBillData.php" method="post">
           
           
-                 <!-- /////////////////////////////////-->
-      <p>
-           <label for="">Meter Number</label>   
-              
- <select>
-      
-          
-          
+                 <!-- ////////////// DROP DOW OF METER///////////////////-->
+<!-- <p>
+           <label for="">Meter Number</label>              
+ <select>          
     <option disabled selected>-- Select Meter Number --</option>
-    <?php
-        include "dbConn.php";  // Using database connection file here
-        $records = mysqli_query($conn, "SELECT meter_no From users_table");  // Use select query here 
-
-        while($data = mysqli_fetch_array($records))
-        {
-            echo "<option value='". $data['meter_no'] ."'>" .$data['meter_no'] ."</option>";  // displaying data in option menu
-        }	
-    ?>  
+  //  <?php
+    //    include "dbConn.php";  // Using database connection file here
+      //  $records = mysqli_query($conn, "SELECT meter_no From users_table");  // Use select query here 
+       // while($data = mysqli_fetch_array($records))
+        //{
+          //  echo "<option value='". $data['meter_no'] ."'>" .$data['meter_no'] ."</option>";  // displaying data in option menu
+        //}	
+    ?>    
+  </select>       
+       <p>    
+--> 
+          <!--////////////////DROP DOW OF METER ENDS HERE////////////////-->
           
-          
-  </select>
-          
-       <p>   
-
-          <!--////////////////////////////////-->
-          
+      <p>
+          <label for="">Meter Number</label>
+          <input type="number" id = "meter_no" name="meterNo">
+        </p>
           
         <p>
           <label for="">Consumer Name</label>
-          <input type="text" name="consumerName">
+          <input type="text" id="fname" name="consumerName" input=$consumerName readonly>
         </p>          
                 
- <!--       <p>
-          <label for="">Meter Number</label>
-          <input type="number" name="mtrno">
-        </p>
-          
- -->       <p>
+     <p>
           <label for="">Quarter Number</label>
-          <input type="text" name="qtrno">
+          <input type="text" id="qtr_no" name="qtrNo" readonly>
         </p>
           
          <p>
           <label for="">Designation</label>
-           <input type="text" name="desig">  
-          </p>     
+           <input type="text" id="designation" name="desig" readonly>  
+          </p>    
+          
+          <p>
+          <label for="">Department</label>
+           <input type="text" id="dept" name="dept" readonly>  
+          </p> 
+
+          <p>
+          <label for="">Mobile Number</label>
+           <input type="text" id="mob_no" name="mobNo" readonly>  
+          </p> 
+
+          <p>
+          <label for="">Email Id</label>
+           <input type="text" id="email" name="email" readonly>  
+          </p> 
                
         <p>
           <label for="">Tariff Category</label>
-          <input type="text" name="tariffCat">
+          <input type="text" id="" name="tariffCat">
         </p>
           
             <p>
@@ -124,7 +172,11 @@
           
             <p>
           <label for="">Connected Load</label>
-          <input type="number" name="connectLoad">
+          <!-- This javascript is used to limit the max Entry -->
+          <input name="connectLoad"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"   
+    type = "number"
+    maxlength = "6"/>
         </p>
           
             <p>

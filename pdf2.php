@@ -30,12 +30,12 @@ if (mysqli_num_rows($res)>0){
 } else {
         $html='Data not Found';
 }
-/*echo $html;*/
+echo $html;
 
 $mpdf= new \Mpdf\Mpdf();
 $mpdf->WriteHTML($html);
 $file='media'.time().'.pdf';
-$mpdf->output($file, 'D');
+$mpdf->output($file, 'I');
 
 //D
 //I

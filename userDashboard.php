@@ -10,14 +10,14 @@ session_start();
 
 // debug session
 var_dump($_SESSION);
-
+echo '<br>';
 echo $_SESSION["meter_no"];
 
 //The below codes just prints the session values
-/*echo '<br>';
+echo '<br>';
 print_r($_SESSION);
 echo '<br>';
-echo("{$_SESSION['meter_no']}"."<br />");*/
+echo("{$_SESSION['meter_no']}"."<br />");
 
 ?>
 

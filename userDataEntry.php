@@ -3,7 +3,7 @@
 <body>
 
     <div class="topnav">
-  <a class="active" href="#home">Home</a>
+  <a class="active" href="home.php">Home</a>
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
@@ -123,12 +123,15 @@
 
         <p>
           <label for="">Mobile Number</label>
-          <input type="number" name="mobno">    
+          <input name="mobno" 
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"   
+          type = "number"
+          maxlength = "10"/>    
         </p>
 
         <p>
           <label for="">Email Id</label>
-          <input type="text" name="email">    
+          <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
         </p>
           
         <p>
