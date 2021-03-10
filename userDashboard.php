@@ -1,6 +1,5 @@
 <?php
 
-
 // turn on error reporting
 error_reporting(1);
 ini_set('error_reporting', E_ALL);
@@ -9,59 +8,39 @@ ini_set('error_reporting', E_ALL);
 session_start();
 
 // debug session
-var_dump($_SESSION);
-echo '<br>';
-echo $_SESSION["meter_no"];
+// var_dump($_SESSION);
+// echo '<br>';
+// echo $_SESSION["meter_no"];
 
 //The below codes just prints the session values
-echo '<br>';
-print_r($_SESSION);
-echo '<br>';
-echo("{$_SESSION['meter_no']}"."<br />");
+// echo '<br>';
+// print_r($_SESSION);
+// echo '<br>';
+// echo("{$_SESSION['meter_no']}"."<br />");
 
 ?>
-
+<!DOCTYPE html>
 <html>
-    <head>
+<title>User Dashboard</title>
 
-        <title>AUEBS Login</title>
+<div class="topnav">
+  <a class="active" href="#">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="#logout">Logout</a>
+</div>
+
+            <h2>AUEBS</h2>
+         <img src="resources/logo.png" alt="Varsity Logo">      
         
-        <link rel="stylesheet" type="text/css" href="gridform.css">
-        
-    </head>
+        <!-- <link rel="stylesheet" type="text/css" href="gridform.css">    -->
+
     
-<body align="center"> <!--to align the entire content in centre-->
-   
-    
-    <h1> User Dashboard</h1>
-    
-    <!DOCTYPE html>
-<html>
-<head>
-<title>Table with database</title>
-    
-    <!--CSS Code for Table displayed-->
-    
-<style>
-table {
-border-collapse: collapse;
-width: 100%;
-color: #588c7e;
-font-family: monospace;
-font-size: 25px;
-text-align: left;
-}
-th {
-background-color: #588c7e;
-color: white;
-}
-tr:nth-child(even) {background-color: #f2f2f2}
-</style>
-    
-    <!--CSS Code for Table displayed ends here-->
-    
-</head>
-<body>
+<body align="center"> <!--to align the entire content in centre--> 
+
+<h3> User Dashboard</h3> 
+
 <table>
 <tr>
 <th>Meter Number</th>
@@ -69,8 +48,8 @@ tr:nth-child(even) {background-color: #f2f2f2}
 <th>User Name</th>
 <th>Units Consumed</th>
 <th>Bill Amount</th>
-
 </tr>
+
 <?php
     
     /* To connect to db */
@@ -108,11 +87,61 @@ echo "</table>";
 $conn->close();
 ?>
 </table>
-</body>
-</html>
-    
-    
-    
+   
     </body>
+
+
+<!-- CSS codes for navbar -->
+
+    <style>
+    /* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4b5195;
+  color: white;
+}
+         </style>
+<!-- Style file for navbar ends here -->
+
+
+    <!--CSS Code for Table displayed-->
+    <style>
+table {
+border-collapse: collapse;
+width: 100%;
+color: #588c7e;
+font-family: monospace;
+font-size: 20px;
+text-align: left;
+}
+th {
+background-color: #588c7e;
+color: white;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+</style>
+    
+    <!--CSS Code for Table displayed ends here-->
     
 </html>

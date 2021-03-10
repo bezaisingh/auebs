@@ -61,13 +61,16 @@
 
     <div class="form">
         
-     <button onclick="location.href = 'userDataEntry.php';" id="btnAdUser" >Add User</button>
-        
-       
-        <br> <br>
-        
+     <button onclick="location.href = 'userDataEntry.php';" id="btnAdUser" >Add User</button>   
+  <br> <br>      
         
         <button onclick="location.href = 'billEntry.php';" id="btnCreateBillr" >Create Bill</button>
+  <br> <br>      
+        
+        <button onclick="location.href = 'allBillList.php';" id="btnCreateBillr" >View All Bills</button>
+  <br> <br>      
+        
+        <button onclick="location.href = 'viewAllUsers.php';" id="btnCreateBillr" >View All Users</button>
    
     </div>
   </div>

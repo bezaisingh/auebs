@@ -1,9 +1,9 @@
 <html>
     <head>
 
-        <title>AUEBS Login</title>
+        <title>AUEBS User Login</title>
         
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <!--<link rel="stylesheet" type="text/css" href="/gridform.css">-->
         
     </head>
     
@@ -11,10 +11,11 @@
     
     
         <div class="topnav">
-  <a class="active" href="home.php">Home</a>
+  <a class="active" href="#">Home</a>
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
+  <a href="#logout">Logout</a>
 </div>
  
 <style>
@@ -47,11 +48,13 @@
 }
          </style>
 
+         <img src="resources/logo.png">
+
     <h1>AUEBS</h1>
-    
     <br>
     
-    <h2>Admin Login Page</h2>
+    <h2>User Login Page</h2>
+    
 
     
    <!-- <div id = "nav">
@@ -66,7 +69,7 @@
     </div>-->
 
 <br> <br> <br> <br> <br> <br> <br>
-   <form align="center" action="queryFiles/adminLogin.php" method="POST">
+   <form align="center" action="queryFiles/userlogin.php" method="POST">
        Username : &nbsp;<input type="text" name="uid">  &nbsp; &nbsp;
        Password : &nbsp;<input type="password" name="pwd">
 <input type="submit" value="Login" name="login">
