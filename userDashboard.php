@@ -40,7 +40,6 @@ session_start();
 <body align="center"> <!--to align the entire content in centre--> 
 
 <h3> User Dashboard</h3> 
-
 <table>
 <tr>
 <th>Meter Number</th>
@@ -57,7 +56,7 @@ include "dbConn.php";
 /*    echo $_SESSION["meter_no"];
     echo '<br>';*/
 $meter_no= $_SESSION["meter_no"];
-    echo '<br>';
+    // echo '<br>';
     
 $sql = "SELECT  meter_no,
                 qtr_no,
