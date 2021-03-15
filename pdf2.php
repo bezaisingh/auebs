@@ -3,7 +3,13 @@ require('mpdf/vendor/autoload.php');
 /*require('mpdf/vendor/autoload.php');*/
 $conn=mysqli_connect('localhost', 'root', '', 'auebs');
 
-$sql="Select * from bill_table";
+$sql="SELECT    id,
+                meter_no,
+                qtr_no,
+                consumer_name,
+                unit_consumed, 
+                net_bill_amt_    FROM bill_table";
+
 $res=mysqli_query($conn,$sql);
 
 if (mysqli_num_rows($res)>0){    
@@ -20,7 +26,8 @@ if (mysqli_num_rows($res)>0){
             </tr>';   
         
         $html.='<tr>
-                    <td>'.$row['id'].'</td><td>'.$row['meter_no'].'</td>
+                    <td>'.$row['id'].'</td>
+                    <td>'.$row['meter_no'].'</td>
                     <td>'.$row['qtr_no'].'</td>
                     <td>'.$row['consumer_name'].'</td>
                 </tr>';
@@ -31,6 +38,7 @@ if (mysqli_num_rows($res)>0){
         $html='Data not Found';
 }
 echo $html;
+
 
 $mpdf= new \Mpdf\Mpdf();
 $mpdf->WriteHTML($html);
