@@ -8,20 +8,21 @@ ini_set('error_reporting', E_ALL);
 session_start();
 
 //debug session
-var_dump($_SESSION);
-echo '<br>';
-echo $_SESSION["meter_no"];
+// var_dump($_SESSION);
+// echo '<br>';
+// echo $_SESSION["meter_no"];
 
 //The below codes just prints the session values
-echo '<br>';
-print_r($_SESSION);
-echo '<br>';
-echo("{$_SESSION['meter_no']}"."<br />");
+// echo '<br>';
+// print_r($_SESSION);
+// echo '<br>';
+// echo("{$_SESSION['meter_no']}"."<br />");
 
 ?>
 <!DOCTYPE html>
 <html>
 <title>User Dashboard</title>
+<link rel="shortcut icon" href="resources\favicon.ico">
 
 <head>
         <link rel="stylesheet" type="text/css" href="navstyle2.css">

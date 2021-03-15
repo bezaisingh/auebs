@@ -1,4 +1,6 @@
 <html>
+  <title>User Data Entry</title>
+  <link rel="shortcut icon" href="resources\favicon.ico">
 <head>
         <link rel="stylesheet" type="text/css" href="navstyle2.css">
       
@@ -22,7 +24,9 @@
 </div>
  <!-- Navigation bar for navstyle2.css ends here -->
            
+           <div class=centre>
          <img src="resources/logo.png" alt="Varsity Logo">  
+         </div>
     
 
     

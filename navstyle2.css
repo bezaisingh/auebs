@@ -55,6 +55,9 @@ body{
 img {
      border-radius: 8px;
      padding: 5px;
+     margin-left: auto;
+     margin-right: auto;
+     display: block;
     }
 
 
@@ -65,13 +68,14 @@ img {
 table {
 border-collapse: collapse;
 width: 100%;
-color: #588c7e;
+color:#333;
+/* color: #588c7e; */
 font-family: monospace;
 font-size: 20px;
 text-align: left;
 }
 th {
-background-color: #588c7e;
+background-color: #4b5195;
 color: white;
 }
 tr:nth-child(even) {background-color: #f2f2f2}
