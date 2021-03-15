@@ -1,8 +1,6 @@
 <?php
 include '../dbConn.php';
 
-
-
 if(isset($_POST["submit"]))
 {
     
@@ -15,6 +13,12 @@ $QtrNo=$_POST["qtrno"];
 $MtrNo=$_POST["mtrno"];
 
 $Desig=$_POST["desig"];
+
+$Dept=$_POST["dept"];
+
+$MobNo=$_POST["mobno"];
+
+$Email=$_POST["email"];
 
 $Uid=$_POST["uid"];
 
@@ -35,7 +39,7 @@ if(!empty($_POST['uid'])){
        else {
     
 
-        $sql="INSERT INTO users_table(fname, lname, meter_no, qtr_no, designation, uid, pwd) VALUES ('$Fname','$Lname','$MtrNo','$QtrNo','$Desig','$Uid','$Pwd')";
+        $sql="INSERT INTO users_table(fname, lname, meter_no, qtr_no, designation, dept, mob_no, email, uid, pwd) VALUES ('$Fname','$Lname','$MtrNo','$QtrNo','$Desig','$Dept', '$MobNo', '$Email','$Uid','$Pwd')";
             if($conn->query($sql)===TRUE)
                 {
                     echo"Record Inserted Successfully";

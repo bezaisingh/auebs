@@ -21,18 +21,29 @@ echo '<br>';
 ?>
 
 <html>
+
+<div class="topnav">
+  <a class="active" href="#">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="queryFiles/logout.php">Logout</a>
+</div>
+        
     <head>
 
         <title>All Bills List</title>
-        
-        <link rel="stylesheet" type="text/css" href="gridform.css">
+
+
+        <!-- <link rel="stylesheet" type="text/css" href="gridform.css"> -->
         
     </head>
     
 <body align="center"> <!--to align the entire content in centre-->
    
     
-    <h1> User Dashboard</h1>
+    <h1>All Bills List</h1>
+
     
     <!DOCTYPE html>
 <html>
@@ -47,7 +58,7 @@ border-collapse: collapse;
 width: 100%;
 color: #588c7e;
 font-family: calibri;
-font-size: 20px;
+font-size: 16px;
 text-align: left;
 }
 th {
@@ -89,7 +100,10 @@ include "dbConn.php";
 //$meter_no= $_SESSION["meter_no"];
     echo '<br>';
     
-$sql = "SELECT  * FROM bill_table";
+// $sql = "SELECT  * FROM bill_table";
+
+$sql= "SELECT * FROM bill_table
+                JOIN users_table WHERE bill_table.meter_no= users_table.meter_no";
     
 $result = $conn->query($sql);
     
@@ -126,5 +140,44 @@ $conn->close();
     
     
     </body>
+
+
+
+
+
+
+    
+<!-- CSS codes for navbar -->
+
+<style>
+    /* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4b5195;
+  color: white;
+}
+         </style>
+<!-- Style file for navbar ends here -->
     
 </html>

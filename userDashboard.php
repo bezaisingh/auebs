@@ -7,38 +7,48 @@ ini_set('error_reporting', E_ALL);
 // start session
 session_start();
 
-// debug session
-// var_dump($_SESSION);
-// echo '<br>';
-// echo $_SESSION["meter_no"];
+//debug session
+var_dump($_SESSION);
+echo '<br>';
+echo $_SESSION["meter_no"];
 
 //The below codes just prints the session values
-// echo '<br>';
-// print_r($_SESSION);
-// echo '<br>';
-// echo("{$_SESSION['meter_no']}"."<br />");
+echo '<br>';
+print_r($_SESSION);
+echo '<br>';
+echo("{$_SESSION['meter_no']}"."<br />");
 
 ?>
 <!DOCTYPE html>
 <html>
 <title>User Dashboard</title>
 
+<head>
+        <link rel="stylesheet" type="text/css" href="navstyle2.css">
+      
+<!-- Navigation bar for navstyle.css -->
+        <!-- <ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a href="#about">Logout</a></li>
+       </ul> -->
+<!-- Navigation bar for navstyle.css ends here -->
+  </head>
+<body align="center"> <!--to align the entire content in centre--> 
+<!-- Navigation bar for navstyle2.css -->
 <div class="topnav">
-  <a class="active" href="#">Home</a>
+  <a class="active" href="home.php">Home</a>
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
-  <a href="#logout">Logout</a>
+  <a style="float:right" href="queryFiles/logout.php">Logout</a>
 </div>
-
-            <h2>AUEBS</h2>
+ <!-- Navigation bar for navstyle2.css ends here -->
+           
          <img src="resources/logo.png" alt="Varsity Logo">      
-        
-        <!-- <link rel="stylesheet" type="text/css" href="gridform.css">    -->
 
-    
-<body align="center"> <!--to align the entire content in centre--> 
-
+         <h2>AUEBS</h2>
 <h3> User Dashboard</h3> 
 <table>
 <tr>
@@ -90,57 +100,6 @@ $conn->close();
     </body>
 
 
-<!-- CSS codes for navbar -->
-
-    <style>
-    /* Add a black background color to the top navigation */
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #4b5195;
-  color: white;
-}
-         </style>
-<!-- Style file for navbar ends here -->
-
-
-    <!--CSS Code for Table displayed-->
-    <style>
-table {
-border-collapse: collapse;
-width: 100%;
-color: #588c7e;
-font-family: monospace;
-font-size: 20px;
-text-align: left;
-}
-th {
-background-color: #588c7e;
-color: white;
-}
-tr:nth-child(even) {background-color: #f2f2f2}
-</style>
-    
-    <!--CSS Code for Table displayed ends here-->
     
 </html>
+

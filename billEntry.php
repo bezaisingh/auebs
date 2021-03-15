@@ -1,4 +1,10 @@
 <html>
+  <title>Bill Entry</title>
+  <head>
+
+  <link rel="stylesheet" type="text/css" href="navstyle2.css">
+
+  </head>
 <body>
 <!-- The lines are important for autofill feature -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,44 +13,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <!-- The lines are important for autofill feature ends here -->
 
-    <div class="topnav">
+<!-- Navigation bar for navstyle2.css -->
+<div class="topnav">
   <a class="active" href="home.php">Home</a>
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
-  <a href="#logout">Logout</a>
+  <a style="float:right" href="queryFiles/logout.php">Logout</a>
 </div>
- 
-<style>
-    /* Add a black background color to the top navigation */
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #4b5195;
-  color: white;
-}
-         </style>
-
+ <!-- Navigation bar for navstyle2.css ends here -->
 
 <!-- javascript code for autofill     -->
 
@@ -79,13 +56,7 @@
 
 <!-- javascript code for autofill ends here -->
 
-
-
-    
-<h1>Bill Data Entry Form!</h1>
-    
- 
-    
+<h1>Bill Data Entry Form!</h1>    
     
 <!-- Form Starts from here -->  
     <div class="contain">
@@ -417,20 +388,6 @@
 </div>
 <!--    Form ends here-->
 
-    <!--Style for Footer-->
-    <style>
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: dimgray;
-  color: white;
-  text-align: center;
-}
-</style>
-     <!--Style for Footer ends here-->
-    
 <!--Footer-->
 <div class="footer">
   <p>Copyright &copy AUEBS</p>

@@ -7,7 +7,7 @@ if(isset($_POST["save"]))
 {
     
     $ConsumerName=$_POST["consumerName"];
-    $MtrNo=$_POST["mtrNo"];
+    $MtrNo=$_POST["meterNo"];
     $QtrNo=$_POST["qtrNo"];
     $Desig=$_POST["desig"];
     $TariffCat=$_POST["tariffCat"];
@@ -55,7 +55,7 @@ if(isset($_POST["save"]))
     $StartDate=$_POST["startDate"];    
     $EndDate=$_POST["endDate"];
     
-if(!empty($_POST['mtrno'])){
+if(!empty($_POST['meterNo'])){
     
         /*$sql="select * from bill_table WHERE meter_no='$MtrNo'";
         $sqli_run=mysqli_query($conn,$sql);
