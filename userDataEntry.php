@@ -83,31 +83,31 @@
       <form action="queryFiles/addUser.php" method="POST">
         <p>
           <label for="">First Name</label>
-          <input type="name" name="fname">
+          <input type="name" name="fname" required>
         </p>
           
            <p>
           <label for="">Last Name</label>
-          <input type="text" name="lname">
+          <input type="text" name="lname" required>
         </p>
           
         <p>
           <label for="">Meter Number</label>
-          <input type="number" name="mtrno">
+          <input type="number" name="mtrno" required>
         </p>
         <p>
           <label for="">Quarter Number</label>
-          <input type="text" name="qtrno">
+          <input type="text" name="qtrno" required>
         </p>
           
            <p>
           <label for="">Designation</label>
-          <input type="text" name="desig">    
+          <input type="text" name="desig" required>    
           </p>
 
           <p>
           <label for="">Department</label>
-          <input type="text" name="dept">    
+          <input type="text" name="dept" required>    
         </p>
 
         <p>
@@ -115,22 +115,22 @@
           <input name="mobno" 
           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"   
           type = "number"
-          maxlength = "10"/>    
+          maxlength = "10" required/>    
         </p>
 
         <p>
           <label for="">Email Id</label>
-          <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+          <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
         </p>
           
         <p>
           <label for="">User Id</label>
-          <input type="text" name="uid">
+          <input type="text" name="uid" required>
         </p>
           
             <p>
           <label for="">Password</label>
-          <input type="text" name="pwd">
+          <input type="text" name="pwd" required>
         </p>
           
        <!-- <p class="full-width">
