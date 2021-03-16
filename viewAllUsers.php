@@ -8,15 +8,15 @@ ini_set('error_reporting', E_ALL);
 session_start();
 
 // debug session
-var_dump($_SESSION);
-echo '<br>';
-echo $_SESSION["meter_no"];
+// var_dump($_SESSION);
+// echo '<br>';
+// echo $_SESSION["meter_no"];
 
 //The below codes just prints the session values
-echo '<br>';
-print_r($_SESSION);
-echo '<br>';
-echo("{$_SESSION['meter_no']}"."<br />");
+// echo '<br>';
+// print_r($_SESSION);
+// echo '<br>';
+// echo("{$_SESSION['meter_no']}"."<br />");
 
 ?>
 
@@ -49,49 +49,29 @@ echo("{$_SESSION['meter_no']}"."<br />");
          <img src="resources/logo.png" alt="Varsity Logo">  
    
     
-    <h1> User Dashboard</h1>
+    <h3>All Users List</h3>
     
     <!DOCTYPE html>
 <html>
 <head>
 <title>Table with database</title>
     
-    <!--CSS Code for Table displayed-->
-    
-<style>
-table {
-border-collapse: collapse;
-width: 100%;
-color: #588c7e;
-font-family: calibri;
-font-size: 20px;
-text-align: left;
-}
-th {
-background-color: #588c7e;
-color: white;
-}
-tr:nth-child(even) {background-color: #f2f2f2}
-</style>
-    
-    <!--CSS Code for Table displayed ends here-->
-    
 </head>
-<body>
-<table>
-<tr>
-<th>ID</th>
-<th>Meter Number</th>
-<th>Quarter Number</th>
-<th>Name</th>
-<th>Designation</th>
-<th>Department</th>
-<th>Mobile Number</th>
-<th>Email ID</th>
+    <body>
+        <table>
+              <tr>
+                    <th>Sl No</th>
+                    <th>Meter Number</th>
+                    <th>Quarter Number</th>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Department</th>
+                    <th>Mobile Number</th>
+                    <th>Email ID</th>
 <!-- <th>User ID</th>
 <th>Password</th> -->
 
-</tr>
+              </tr>
 <?php
     
     /* To connect to db */

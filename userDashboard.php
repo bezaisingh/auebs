@@ -40,9 +40,9 @@ session_start();
 <!-- Navigation bar for navstyle2.css -->
 <div class="topnav">
   <a class="active" href="home.php">Home</a>
-  <a href="#news">News</a>
+ <!--  <a href="#news">News</a>
   <a href="#contact">Contact</a>
-  <a href="#about">About</a>
+  <a href="#about">About</a> -->
   <a style="float:right" href="queryFiles/logout.php">Logout</a>
 </div>
  <!-- Navigation bar for navstyle2.css ends here -->

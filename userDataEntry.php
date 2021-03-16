@@ -24,13 +24,13 @@
 </div>
  <!-- Navigation bar for navstyle2.css ends here -->
            
-           <div class=centre>
-         <img src="resources/logo.png" alt="Varsity Logo">  
-         </div>
+        <div class=centre>
+            <img src="resources/logo.png" alt="Varsity Logo">  
+        </div>
     
 
     
-<h1>Consumer Master Data Entry Form!</h1>
+<h1>Consumer Data Entry Form!</h1>
     
    <!--Old Simple Form-->
 <!--<form>
