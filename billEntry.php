@@ -98,7 +98,7 @@
           
       <p>
           <label for="">Meter Number</label>
-          <input type="number" id = "meter_no" name="meterNo">
+          <input type="number" id = "meter_no" name="meterNo" required>
         </p>
           
         <p>
@@ -133,12 +133,12 @@
                
         <p>
           <label for="">Tariff Category</label>
-          <input type="text" id="" name="tariffCat">
+          <input type="text" id="" name="tariffCat" required>
         </p>
           
             <p>
           <label for="">Supply Voltage Level</label>
-          <input type="text" name="supplyVoltLvl">
+          <input type="text" name="supplyVoltLvl" required>
         </p>
           
             <p>
@@ -147,228 +147,228 @@
           <input name="connectLoad"
           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"   
     type = "number"
-    maxlength = "6"/>
+    maxlength = "6" required/>
         </p>
           
             <p>
           <label for="">Bill Amount</label>
-          <input type="number" name="billAmt">
+          <input type="number" name="billAmt" required>
         </p>
           
             <p>
           <label for="">Bill Number</label>
-          <input type="number" name="billNo">
+          <input type="number" name="billNo" required>
         </p>
           
             <p>
           <label for="">Bill Period</label>
-          <input type="text" name="billPeriod">
+          <input type="text" name="billPeriod" required>
         </p>
           
             <p>
           <label for="">Bill Date</label>
-          <input type="date" name="billDate">
+          <input type="date" name="billDate" required>
         </p>
           
             <p>
           <label for="">Number of Days</label>
-          <input type="number" name="noOfDays">
+          <input type="number" name="noOfDays" required>
         </p>
           
             <p>
           <label for="">Meter Status</label>
-          <input type="text" name="mtrStatus">
+          <input type="text" name="mtrStatus" required>
         </p>
           
             <p>
           <label for="">Billing Status</label>
-          <input type="text" name="billingStatus">
+          <input type="text" name="billingStatus" required>
         </p>
           
             <p>
           <label for="">Address</label>
-          <input type="text" name="address">
+          <input type="text" name="address" required>
         </p>
           
             <p>
           <label for="">Reading Type</label>
-          <input type="text" name="readingType">
+          <input type="text" name="readingType" required>
         </p>
           
             <p>
           <label for="">Previous Reading</label>
-          <input type="number" name="prevReading">
+          <input type="number" name="prevReading" required>
         </p>
           
             <p>
           <label for="">Current Reading</label>
-          <input type="number" name="currentReading">
+          <input type="number" name="currentReading" required>
         </p>
           
             <p>
           <label for="">Difference in Reading</label>
-          <input type="number" name="diffInReading">
+          <input type="number" name="diffInReading" required>
         </p>
           
             <p>
           <label for="">Units Consumed</label>
-          <input type="number" name="unitsConsumed">
+          <input type="number" name="unitsConsumed" required>
         </p>
           
             <p>
           <label for="">Billable Units</label>
-          <input type="number" name="billableUnits">
+          <input type="number" name="billableUnits" required>
         </p>
           
             <p>
           <label for="">Recorded Demand</label>
-          <input type="number" name="recordDemand">
+          <input type="number" name="recordDemand" required>
         </p>
           
            <p>
           <label for="">Max Demand</label>
-          <input type="number" name="maxDemand">
+          <input type="number" name="maxDemand" required>
         </p>
           
           
           
            <p>
           <label for="">Billing Demand</label>
-          <input type="number" name="billingDemad">
+          <input type="number" name="billingDemad" required>
         </p>
           
            <p>
           <label for="">Average Power Factor</label>
-          <input type="number" name="avgPowFactor">
+          <input type="number" name="avgPowFactor" required>
         </p>
           
            <p>
           <label for="">Power on Hours</label>
-          <input type="number" name="powOnHrs">
+          <input type="number" name="powOnHrs" required >
         </p>
           
            <p>
           <label for="">Availability Percent</label>
-          <input type="text" name="availPercent">
+          <input type="text" name="availPercent" required>
         </p>
           
            <p>
           <label for="">Current Demand</label>
-          <input type="number" name="currentDemand">
+          <input type="number" name="currentDemand" required>
         </p>
           
            <p>
           <label for="">Outstanding Demand</label>
-          <input type="number" name="outstandingDemand">
+          <input type="number" name="outstandingDemand" required>
         </p>
           
            <p>
           <label for="">Adjustment Amount</label>
-          <input type="number" name="adjAmt">
+          <input type="number" name="adjAmt" required>
         </p>
           
            <p>
           <label for="">Net Bill Amount</label>
-          <input type="number" name="netBillAmt">
+          <input type="number" name="netBillAmt" required>
         </p>
           
            <p>
           <label for="">Net Bill Amount in Words</label>
-          <input type="text" name="netBillInWords">
+          <input type="text" name="netBillInWords" required>
         </p>
           
              <p>
           <label for="">Rate</label>
-          <input type="number" name="rate">
+          <input type="number" name="rate" required>
         </p>
           
           
              <p>
           <label for="">Energy Charge</label>
-          <input type="number" name="energyCharge">
+          <input type="number" name="energyCharge" required>
         </p>
           
           
              <p>
           <label for="">Total Energy Charge</label>
-          <input type="number" name="totEnergyCharge">
+          <input type="number" name="totEnergyCharge" required>
         </p>
           
           
              <p>
           <label for="">Demand Fixed Charge</label>
-          <input type="number" name="demandFixedCharge">
+          <input type="number" name="demandFixedCharge" required>
         </p>
           
           
              <p>
           <label for="">Electricity Duty</label>
-          <input type="number" name="electricityDuty">
+          <input type="number" name="electricityDuty" required>
         </p>
           
           
              <p>
           <label for="">Meter Rent</label>
-          <input type="number" name="mtrRent">
+          <input type="number" name="mtrRent" required>
         </p>
           
           
              <p>
           <label for="">Arrear Principle</label>
-          <input type="number" name="arrPrinciple">
+          <input type="number" name="arrPrinciple" required>
         </p>
           
                   <p>
           <label for="">Arrear Surcharge</label>
-          <input type="number" name="arrSurcharge">
+          <input type="number" name="arrSurcharge" required>
         </p>
           
           
         <p>
           <label for="">Current Surcharge</label>
-          <input type="number" name="currSurcharge">
+          <input type="number" name="currSurcharge" required>
         </p>
           
           
         <p>
           <label for="">Miscellaneous Arrear</label>
-          <input type="number" name="miscArrear">
+          <input type="number" name="miscArrear" required>
         </p>
           
           
         <p>
           <label for="">Payable Amount Before Due Date</label>
-          <input type="number" name="payableAmtBfDueDate">
+          <input type="number" name="payableAmtBfDueDate" required>
         </p>
           
           
                   <p>
           <label for="">Payable Amount After Due Date</label>
-          <input type="number" name="payableAmtAfDueDate">
+          <input type="number" name="payableAmtAfDueDate" required>
         </p>
           
           
                   <p>
           <label for="">Prepared by</label>
-          <input type="text" name="prepBy">
+          <input type="text" name="prepBy" required>
         </p>
           
           
                   <p>
           <label for="">Consumer Category</label>
-          <input type="text" name="consumerCat">
+          <input type="text" name="consumerCat" required>
         </p>
           
           
                   <p>
           <label for="">Start Date</label>
-          <input type="date" name="startDate">
+          <input type="date" name="startDate" required>
         </p>
           
           
         <p>
           <label for="">End Date</label>
-          <input type="date" name="endDate">
+          <input type="date" name="endDate" required>
         </p>
           
           
