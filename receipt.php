@@ -10,18 +10,18 @@ session_start();
 
 
 //debug session
-var_dump($_SESSION);
-echo '<br>';
-echo $_SESSION["meter_no"];
+// var_dump($_SESSION);
+// echo '<br>';
+// echo $_SESSION["meter_no"];
 
-echo '<br>';
-echo $id;
+// echo '<br>';
+// echo $id;
 
 //The below codes just prints the session values
-echo '<br>';
-print_r($_SESSION);
-echo '<br>';
-echo("{$_SESSION['meter_no']}"."<br />");
+// echo '<br>';
+// print_r($_SESSION);
+// echo '<br>';
+// echo("{$_SESSION['meter_no']}"."<br />");
 
 
 require('fpdf/fpdf.php');
@@ -30,7 +30,10 @@ require('fpdf/fpdf.php');
 $conn=mysqli_connect('localhost','root','','auebs');
 mysqli_select_db($conn,"auebs");
 //Data fetching query
-$sql = "SELECT * FROM bill_table JOIN users_table WHERE bill_table.`meter_no`=users_table.`meter_no`";
+$sql = "SELECT * FROM bill_table INNER JOIN users_table 
+        ON bill_table.meter_no= users_table.meter_no 
+        WHERE bill_table.id=$id";
+        
 $result = $conn->query($sql);
 
 if($result !== false && $result->num_rows > 0){

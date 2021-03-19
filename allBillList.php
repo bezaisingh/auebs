@@ -54,6 +54,7 @@ session_start();
 <!-- <th>Mobile Number</th>
 <th>Email ID</th> -->
 <th>Bill Amount</th>
+<th>Print</th>
 <!-- <th>Bill No</th>
 <th>Bill Period</th>
 <th>Bill date</th>
@@ -73,8 +74,8 @@ include "dbConn.php";
     
 // $sql = "SELECT  * FROM bill_table";
 
-$sql= "SELECT * FROM bill_table
-                JOIN users_table WHERE bill_table.meter_no= users_table.meter_no";
+$sql= "SELECT * FROM users_table
+                INNER JOIN bill_table ON bill_table.meter_no= users_table.meter_no";
     
 $result = $conn->query($sql);
     
@@ -92,6 +93,8 @@ echo "<tr>
             <td>" . $row["designation"]. "</td>
             <td>" . $row["dept"]. "</td>
             <td>" . $row["bill_amt"] . "</td>
+            <td><a href = 'receipt.php?id=$row[id]'>Print Bill</td>
+
                     
       </tr>";
 
