@@ -7,6 +7,10 @@ ini_set('error_reporting', E_ALL);
 // start session
 session_start();
 
+if ($_SESSION["meter_no"] == null){
+
+  header("location:./index.html");
+}
 //debug session
 // var_dump($_SESSION);
 // echo '<br>';
@@ -53,11 +57,13 @@ session_start();
 <h3> User Dashboard</h3> 
 <table>
 <tr>
+<th>ID</th>
 <th>Meter Number</th>
 <th>Quarter Number</th>
 <th>User Name</th>
 <th>Units Consumed</th>
 <th>Bill Amount</th>
+<th>Print</th>
 </tr>
 
 <?php
@@ -69,7 +75,8 @@ include "dbConn.php";
 $meter_no= $_SESSION["meter_no"];
     // echo '<br>';
     
-$sql = "SELECT  meter_no,
+$sql = "SELECT  id,
+                meter_no,
                 qtr_no,
                 consumer_name,
                 unit_consumed, 
@@ -84,11 +91,13 @@ if($result !== false && $result->num_rows > 0)
 // output data of each row
 while($row = $result->fetch_assoc()) {
 echo "<tr>
+            <td>" . $row["id"] . "</td>
             <td>" . $row["meter_no"] . "</td>
             <td>" . $row["qtr_no"]. "</td>
             <td>" . $row["consumer_name"]. "</td>
             <td>" . $row["unit_consumed"]. "</td>
             <td>" . $row["net_bill_amt_"]. "</td>
+            <td><a href = 'receipt.php?id=$row[id]'>Print Bill</td>
             
       </tr>";
 }

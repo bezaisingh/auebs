@@ -1,12 +1,36 @@
 <?php
 
+// turn on error reporting
+error_reporting(1);
+ini_set('error_reporting', E_ALL);
+$id=$_GET['id'];
+
+// start session
+session_start();
+
+
+//debug session
+var_dump($_SESSION);
+echo '<br>';
+echo $_SESSION["meter_no"];
+
+echo '<br>';
+echo $id;
+
+//The below codes just prints the session values
+echo '<br>';
+print_r($_SESSION);
+echo '<br>';
+echo("{$_SESSION['meter_no']}"."<br />");
+
+
 require('fpdf/fpdf.php');
 
 // Db connectio querry
 $conn=mysqli_connect('localhost','root','','auebs');
 mysqli_select_db($conn,"auebs");
 //Data fetching query
-$sql = "SELECT * FROM bill_table JOIN users_table WHERE bill_table.`meter_no`=users_table.`meter_no`;";
+$sql = "SELECT * FROM bill_table JOIN users_table WHERE bill_table.`meter_no`=users_table.`meter_no`";
 $result = $conn->query($sql);
 
 if($result !== false && $result->num_rows > 0){
