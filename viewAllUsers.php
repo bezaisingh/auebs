@@ -21,9 +21,9 @@ session_start();
 ?>
 
 <html>
-    <title>All Users List</title>
-    
+        
     <head>
+        <title>All Users List</title>
         <link rel="stylesheet" type="text/css" href="navstyle2.css">
       
 <!-- Navigation bar for navstyle.css -->
@@ -35,7 +35,7 @@ session_start();
        </ul> -->
 <!-- Navigation bar for navstyle.css ends here -->
   </head>
-<body align="center"> <!--to align the entire content in centre--> 
+<body> <!--to align the entire content in centre--> 
 <!-- Navigation bar for navstyle2.css -->
 <div class="topnav">
   <a class="active" href="home.php">Home</a>
@@ -46,10 +46,12 @@ session_start();
 </div>
  <!-- Navigation bar for navstyle2.css ends here -->
            
-         <img src="resources/logo.png" alt="Varsity Logo">  
+        <div style="margin-top: 50px" class=centre>
+            <img src="resources/logo.png" alt="Varsity Logo">  
+        </div>
    
     
-    <h3>All Users List</h3>
+    <h3 align="center">All Users List</h3>
     
     <!DOCTYPE html>
 <html>
@@ -115,5 +117,9 @@ $conn->close();
     
     
     </body>
+
+    <div class="footer">
+  <p>Copyright &copy AUEBS</p>
+</div>
     
 </html>

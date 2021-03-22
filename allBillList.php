@@ -1,8 +1,8 @@
 <?php
 
 // turn on error reporting
-error_reporting(1);
-ini_set('error_reporting', E_ALL);
+  // error_reporting(1);
+  // ini_set('error_reporting', E_ALL);
 
 // start session
 session_start();
@@ -36,13 +36,18 @@ session_start();
         
     </head>
     
-<body align="center"> <!--to align the entire content in centre-->
+<body > <!--to align the entire content in centre-->
 
     <img src="resources/logo.png" alt="Varsity Logo">      
 
-         <h2>AUEBS</h2>
-    <h3>All Bills List</h3>
-    
+         <h2 align="center">AUEBS</h2>
+    <h3 align="center">All Bills List</h3>
+
+    <div align="right" style="margin-right: 10px">
+      <a href="printBillList.php">Print Pdf</a>
+    </div>
+
+
 <table>
 <tr>
 <th>Sl No</th>
@@ -75,7 +80,8 @@ include "dbConn.php";
 // $sql = "SELECT  * FROM bill_table";
 
 $sql= "SELECT * FROM users_table
-                INNER JOIN bill_table ON bill_table.meter_no= users_table.meter_no";
+         INNER JOIN  bill_table
+         ON bill_table.meter_no = users_table.meter_no;";
     
 $result = $conn->query($sql);
     

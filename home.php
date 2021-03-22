@@ -23,7 +23,11 @@
   <a style="float:right" href="queryFiles/logout.php">Logout</a>
 </div>
  <!-- Navigation bar for navstyle2.css ends here -->
-    <h1>Choose Action</h1>
+        <div class=centre>
+            <img src="resources/logo.png" alt="Varsity Logo">  
+        </div>
+    
+<h2 align="center">Select an action from the given below options</h2>
 
 <!-- Form Starts from here -->  
     <div class="contain">

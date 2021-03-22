@@ -30,7 +30,7 @@
     
 
     
-<h1>Consumer Data Entry Form!</h1>
+<h2 align="center">Consumer Data Entry Form!</h2>
     
    <!--Old Simple Form-->
 <!--<form>
