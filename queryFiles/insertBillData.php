@@ -97,8 +97,9 @@ if(!empty($_POST['meterNo'])){
                                     avl_percent,
                                     current_demand,
                                     adj_amt,
-                                    net_bill_amt_in_wrds,
                                     net_bill_amt_,
+                                    net_bill_amt_in_wrds,
+                                    
                                     rate,
                                     energy_charge,
                                     tot_energy_charge,

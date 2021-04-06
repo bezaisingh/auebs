@@ -112,10 +112,7 @@
 
         <p>
           <label for="">Mobile Number</label>
-          <input name="mobno" 
-          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"   
-          type = "number"
-          maxlength = "10" required/>    
+          <input name="mobno" type = "tel" placeholder="10 digit Number only" pattern="[6-9]{1}[0-9]{3}[0-9]{3}[0-9]{3}" maxlength = "10" required/>    
         </p>
 
         <p>

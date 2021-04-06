@@ -23,6 +23,10 @@
 </div>
  <!-- Navigation bar for navstyle2.css ends here -->
 
+ <div class=centre>
+            <img style= "margin-top: 50px" src="resources/logo.png" alt="Varsity Logo">  
+        </div>
+
 <!-- javascript code for autofill     -->
 
 <script type="text/javascript">
@@ -56,7 +60,7 @@
 
 <!-- javascript code for autofill ends here -->
 
-<h1>Bill Data Entry Form!</h1>    
+<h2 align="center">Bill Data Entry Form!</h2>    
     
 <!-- Form Starts from here -->  
     <div class="contain">

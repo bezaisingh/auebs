@@ -51,7 +51,9 @@ if ($_SESSION["meter_no"] == null){
 </div>
  <!-- Navigation bar for navstyle2.css ends here -->
            
-         <img src="resources/logo.png" alt="Varsity Logo">      
+        <div class=centre>
+            <img style= "margin-top: 50px" src="resources/logo.png" alt="Varsity Logo">  
+        </div>     
 
          <h2>AUEBS</h2>
 <h3> User Dashboard</h3> 

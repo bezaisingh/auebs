@@ -1,6 +1,13 @@
 <?php
 include '../dbConn.php';
 
+if(isset($_GET["message"]))
+{
+    $message=$_GET["message"];
+    echo $message;
+}
+
+
 if(isset($_POST["submit"]))
 {
     
@@ -23,8 +30,6 @@ $Email=$_POST["email"];
 $Uid=$_POST["uid"];
 
 $Pwd=$_POST["pwd"];
-
-
     
 if(!empty($_POST['uid'])){
     
@@ -43,7 +48,7 @@ if(!empty($_POST['uid'])){
             if($conn->query($sql)===TRUE)
                 {
                     echo"Record Inserted Successfully";
-                    header("location:../userDataEntry.php");
+                    header("location:../userDataEntry.php?message=Success");
                 }
                 else
                 {
