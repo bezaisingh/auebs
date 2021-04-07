@@ -1,13 +1,5 @@
-function phonenumber(inputtxt)
+function btnClick()
 {
-  var phoneno = /^\d{10}$/;
-  if((inputtxt.value.match(phoneno))
-        {
-      return true;
-        }
-      else
-        {
-        alert("message");
-        return false;
-        }
+    var str = document.getElementById("text").value;
+    alert("The vale Entered is :"+ str);
 }

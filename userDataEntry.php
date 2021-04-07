@@ -1,3 +1,19 @@
+<?php
+
+if(isset($_GET["message"]))
+{
+    $message=$_GET["message"];
+    echo $message;
+    echo "
+    <script type=\"text/javascript\">
+    alert('User data entered successfully');
+    </script>";
+
+    
+}
+
+?>
+
 <html>
   <title>User Data Entry</title>
   <link rel="shortcut icon" href="resources\favicon.ico">

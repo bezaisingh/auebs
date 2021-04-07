@@ -175,7 +175,7 @@ if(!empty($_POST['meterNo'])){
             if($conn->query($sql)===TRUE)
                 {
                     echo"Record Inserted Successfully";
-                    header("location:../billEntry.php");
+                    header("location:../billEntry.php?message=Success");
                 }
                 else
                 {
