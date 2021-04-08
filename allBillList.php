@@ -32,7 +32,7 @@ session_start();
         
     <head>
 
-        <link rel="stylesheet" type="text/css" href="navstyle2.css">
+        <link rel="stylesheet" type="text/css" href="css/navstyle2.css">
         
     </head>
     

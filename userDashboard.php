@@ -29,7 +29,7 @@ if ($_SESSION["meter_no"] == null){
 <link rel="shortcut icon" href="resources\favicon.ico">
 
 <head>
-        <link rel="stylesheet" type="text/css" href="navstyle2.css">
+        <link rel="stylesheet" type="text/css" href="css/navstyle2.css">
       
 <!-- Navigation bar for navstyle.css -->
         <!-- <ul>

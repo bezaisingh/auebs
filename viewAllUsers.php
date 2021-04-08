@@ -24,7 +24,7 @@ session_start();
         
     <head>
         <title>All Users List</title>
-        <link rel="stylesheet" type="text/css" href="navstyle2.css">
+        <link rel="stylesheet" type="text/css" href="css/navstyle2.css">
       
 <!-- Navigation bar for navstyle.css -->
         <!-- <ul>

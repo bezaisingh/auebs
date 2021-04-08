@@ -16,7 +16,7 @@ if(isset($_GET["message"]))
   <title>Bill Entry</title>
   <head>
 
-  <link rel="stylesheet" type="text/css" href="navstyle2.css">
+  <link rel="stylesheet" type="text/css" href="css/navstyle2.css">
 
   </head>
 <body>
@@ -28,7 +28,7 @@ if(isset($_GET["message"]))
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 
   <!-- The below 3 lines are same what the above 3 lines are but locally stored -->
-  
+
   <link rel="stylesheet" type="text/css" href="css/autofill.css"> 
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

@@ -18,7 +18,7 @@ if(isset($_GET["message"]))
   <title>User Data Entry</title>
   <link rel="shortcut icon" href="resources\favicon.ico">
 <head>
-        <link rel="stylesheet" type="text/css" href="navstyle2.css">
+        <link rel="stylesheet" type="text/css" href="css/navstyle2.css">
       
 <!-- Navigation bar for navstyle.css -->
         <!-- <ul>
@@ -81,7 +81,7 @@ if(isset($_GET["message"]))
     
 <!-- Form Starts from here -->  
     <div class="contain">
-        <link rel="stylesheet" type="text/css" href="gridform.css">
+        <link rel="stylesheet" type="text/css" href="css/gridform.css">
 
   <div class="wrapper">
     <div class="contacts">

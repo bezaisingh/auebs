@@ -1,7 +1,7 @@
 <html>
   <title>Home</title>
   <head>
-        <link rel="stylesheet" type="text/css" href="navstyle2.css">
+        <link rel="stylesheet" type="text/css" href="css/navstyle2.css">
       
 <!-- Navigation bar for navstyle.css -->
         <!-- <ul>
@@ -31,7 +31,7 @@
 
 <!-- Form Starts from here -->  
     <div class="contain">
-    <link rel="stylesheet" type="text/css" href="gridform.css">
+    <link rel="stylesheet" type="text/css" href="css/gridform.css">
       <div class="wrapper">
         <div class="contacts">
 
