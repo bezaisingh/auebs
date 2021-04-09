@@ -43,7 +43,7 @@ if ($_SESSION["meter_no"] == null){
 <body align="center"> <!--to align the entire content in centre--> 
 <!-- Navigation bar for navstyle2.css -->
 <div class="topnav">
-  <a class="active" href="home.php">Home</a>
+  <a class="active" href="userDashboard.php">Home</a>
  <!--  <a href="#news">News</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a> -->

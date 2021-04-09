@@ -85,7 +85,7 @@ if(isset($_GET["message"]))
     
 <!-- Form Starts from here -->  
     <div class="contain">
-        <link rel="stylesheet" type="text/css" href="gridform.css">
+        <link rel="stylesheet" type="text/css" href="css/gridform.css">
 
   <div class="wrapper">
     <div class="contacts">
