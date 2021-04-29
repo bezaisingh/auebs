@@ -48,7 +48,7 @@ button {
 @media (min-width: 700px) {
   .wrapper {
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr 2fr;
   }
   .wrapper > * {
     padding: 2em 2em;
@@ -60,10 +60,10 @@ ul {
   padding: 0;
 }
 
-/* .contacts {
+.contacts {
   background: #4b5195;
   color: #fff;
-} */
+}
 
 .form {
   background: #fff;

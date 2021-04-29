@@ -145,11 +145,16 @@ if(isset($_GET["message"]))
           <label for="">Password</label>
           <input type="text" name="pwd" required>
         </p>
+
+         <p class="full-width">
+          <label for="">Remarks (if any)</label>
+          <input name="remark" id="remark" ></input>
+        </p>
           
-       <!-- <p class="full-width">
+       <!--  <p class="full-width">
           <label for="">Additional Details (Optional)</label>
           <textarea name="" id="" cols="30" rows="7"></textarea>
-        </p>-->
+        </p> -->
           
         <p class="full-width">
           <button type="submit" name="submit">Save</button>

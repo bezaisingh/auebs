@@ -91,11 +91,7 @@ if(isset($_GET["message"]))
     <div class="contacts">
       <h3>AUEBS</h3>
 
-      <ul>
-        <li>Assam University Energy Billing System</li>
-        <li>Assam University Silchar - 788 011, Assam, India</li>
-          <li>update.auwebsite@gmail.com</li>
-      </ul>
+    
     </div>
 
     <div class="form">
@@ -136,10 +132,10 @@ if(isset($_GET["message"]))
           <input type="text" id="qtr_no" name="qtrNo" readonly>
         </p>
           
-         <p>
+         <!-- <p>
           <label for="">Designation</label>
            <input type="text" id="designation" name="desig" readonly>  
-          </p>    
+          </p>     -->
           
           <p>
           <label for="">Department</label>
@@ -155,6 +151,22 @@ if(isset($_GET["message"]))
           <label for="">Email Id</label>
            <input type="text" id="email" name="email" readonly>  
           </p> 
+
+          <p>
+          <label for="">Bill Date</label>
+          <input type="date" name="billDate" required>
+        </p>
+
+          <p>
+          <label for="">Start Date</label>
+          <input type="date" name="startDate" required>
+        </p>
+          
+          
+        <p>
+          <label for="">End Date</label>
+          <input type="date" name="endDate" required>
+        </p>
                
         <p>
           <label for="">Tariff Category</label>
@@ -175,25 +187,22 @@ if(isset($_GET["message"]))
     maxlength = "6" required/>
         </p>
           
-            <p>
+            <!-- <p>
           <label for="">Bill Amount</label>
           <input type="number" name="billAmt" required>
-        </p>
+        </p> -->
           
             <p>
           <label for="">Bill Number</label>
           <input type="number" name="billNo" required>
         </p>
           
-            <p>
+            <!-- <p>
           <label for="">Bill Period</label>
           <input type="text" name="billPeriod" required>
-        </p>
+        </p> -->
           
-            <p>
-          <label for="">Bill Date</label>
-          <input type="date" name="billDate" required>
-        </p>
+
           
             <p>
           <label for="">Number of Days</label>
@@ -215,10 +224,10 @@ if(isset($_GET["message"]))
           <input type="text" name="address" required>
         </p>
           
-            <p>
+            <!-- <p>
           <label for="">Reading Type</label>
           <input type="text" name="readingType" required>
-        </p>
+        </p> -->
           
             <p>
           <label for="">Previous Reading</label>
@@ -245,120 +254,120 @@ if(isset($_GET["message"]))
           <input type="number" name="billableUnits" required>
         </p>
           
-            <p>
+            <!-- <p>
           <label for="">Recorded Demand</label>
           <input type="number" name="recordDemand" required>
-        </p>
+        </p> -->
           
-           <p>
+           <!-- <p>
           <label for="">Max Demand</label>
           <input type="number" name="maxDemand" required>
-        </p>
+        </p> -->
           
           
           
-           <p>
+           <!-- <p>
           <label for="">Billing Demand</label>
           <input type="number" name="billingDemad" required>
-        </p>
+        </p> -->
           
            <p>
           <label for="">Average Power Factor</label>
           <input type="number" name="avgPowFactor" required>
         </p>
           
-           <p>
+           <!-- <p>
           <label for="">Power on Hours</label>
           <input type="number" name="powOnHrs" required >
-        </p>
+        </p> -->
           
-           <p>
+           <!-- <p>
           <label for="">Availability Percent</label>
           <input type="text" name="availPercent" required>
-        </p>
+        </p> -->
           
-           <p>
+           <!-- <p>
           <label for="">Current Demand</label>
           <input type="number" name="currentDemand" required>
-        </p>
+        </p> -->
           
-           <p>
+           <!-- <p>
           <label for="">Outstanding Demand</label>
           <input type="number" name="outstandingDemand" required>
-        </p>
+        </p> -->
           
            <p>
           <label for="">Adjustment Amount</label>
           <input type="number" name="adjAmt" required>
         </p>
           
-           <p>
+           <!-- <p>
           <label for="">Net Bill Amount</label>
           <input type="number" name="netBillAmt" required>
-        </p>
+        </p> -->
           
-           <p>
+           <!-- <p>
           <label for="">Net Bill Amount in Words</label>
           <input type="text" name="netBillInWords" required>
-        </p>
+        </p> -->
           
-             <p>
+             <!-- <p>
           <label for="">Rate</label>
           <input type="number" name="rate" required>
-        </p>
+        </p> -->
           
           
-             <p>
+             <!-- <p>
           <label for="">Energy Charge</label>
           <input type="number" name="energyCharge" required>
-        </p>
+        </p> -->
           
           
-             <p>
+             <!-- <p>
           <label for="">Total Energy Charge</label>
           <input type="number" name="totEnergyCharge" required>
-        </p>
+        </p> -->
           
           
-             <p>
+             <!-- <p>
           <label for="">Demand Fixed Charge</label>
           <input type="number" name="demandFixedCharge" required>
-        </p>
+        </p> -->
           
           
-             <p>
+             <!-- <p>
           <label for="">Electricity Duty</label>
           <input type="number" name="electricityDuty" required>
-        </p>
+        </p> -->
           
           
              <p>
           <label for="">Meter Rent</label>
-          <input type="number" name="mtrRent" required>
+          <input name="mtrRent" text="50">
         </p>
           
           
-             <p>
+             <!-- <p>
           <label for="">Arrear Principle</label>
           <input type="number" name="arrPrinciple" required>
-        </p>
+        </p> -->
           
-                  <p>
+                  <!-- <p>
           <label for="">Arrear Surcharge</label>
           <input type="number" name="arrSurcharge" required>
-        </p>
+        </p> -->
           
           
-        <p>
+        <!-- <p>
           <label for="">Current Surcharge</label>
           <input type="number" name="currSurcharge" required>
-        </p>
+        </p> -->
           
           
-        <p>
+        <!-- <p>
           <label for="">Miscellaneous Arrear</label>
           <input type="number" name="miscArrear" required>
-        </p>
+        </p> -->
           
           
         <p>
@@ -375,26 +384,17 @@ if(isset($_GET["message"]))
           
                   <p>
           <label for="">Prepared by</label>
-          <input type="text" name="prepBy" required>
+          <input type="text" name="prepBy" text="Engineering Section, AUS" required>
         </p>
           
           
-                  <p>
+                  <!-- <p>
           <label for="">Consumer Category</label>
           <input type="text" name="consumerCat" required>
-        </p>
+        </p> -->
           
           
-                  <p>
-          <label for="">Start Date</label>
-          <input type="date" name="startDate" required>
-        </p>
-          
-          
-        <p>
-          <label for="">End Date</label>
-          <input type="date" name="endDate" required>
-        </p>
+   
           
           
           
@@ -404,7 +404,7 @@ if(isset($_GET["message"]))
         </p>-->
           
         <p class="full-width">
-          <button value="save" name="save">Save</button>
+          <button value="save" name="save">Generate Bill</button>
             
         </p>
       </form>
@@ -415,6 +415,14 @@ if(isset($_GET["message"]))
 
 <!--Footer-->
 <div class="footer">
+    
+       <ul>
+        <li>Assam University Energy Billing System</li>
+        <li>Assam University Silchar - 788 011, Assam, India</li>
+          <li>update.auwebsite@gmail.com</li>
+      </ul>
+   
+    
   <p>Copyright &copy AUEBS</p>
 </div>
     <!--Footer ends-->
