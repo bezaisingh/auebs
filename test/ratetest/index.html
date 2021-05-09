@@ -1,0 +1,97 @@
+<html>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+
+<script src="jquery.min.js"></script>
+
+  <head><title>Simple HTML Calculation form</title></head>
+  <body>
+    <script src="js.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-6 row-heading">
+          Levels
+        </div>
+        <div class="col-3 row-heading">
+          Units in KwH
+        </div>
+        <div class="col-2 row-heading">
+          Price in ₹
+        </div>
+      
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col-6">
+          Total Units Consumed:
+        </div>
+        <div class="col-3">
+          <input type="number" value="0" class="qty" id="total_units"/>
+        </div>
+      </div>
+<br>
+      <div class="row">
+        <div class="col-6">
+          1. Slab 1
+        </div>
+        <div class="col-3">
+          <input type="number" value="0" class="qty" id="slab1_units"/>
+        </div>
+        <div class="col-2">
+          <input type="number" readonly value="0" id="slab1_price"/>
+        </div>
+      </div>
+      
+       <div class="row my-3">
+        <div class="col-6">
+          2. Slab 2
+        </div>
+        <div class="col-3">
+          <input type="number" value="0" class="qty" id="slab2_units"/>
+        </div>
+        <div class="col-2">
+          <input type="number" readonly value="0" id="slab2_price"/>
+        </div>
+      </div>
+      
+      <div class="row my-3">
+        <div class="col-6">
+          3. Slab 3
+        </div>
+        <div class="col-3">
+          <input type="number" class="qty" value="0" id="slab3_units"/>
+        </div>
+        <div class="col-2">
+          <input type="number" readonly value="0" id="slab3_price"/>
+        </div>
+      </div>
+      
+      <div class="row my-3">
+        <div class="col-6">
+          4. Slab 4
+        </div>
+        <div class="col-3">
+          <input type="number" class="qty" value="0" id="slab4_units"/>
+        </div>
+        <div class="col-2">
+          <input type="number" readonly value="0" id="slab4_price"/>
+        </div>
+      </div>
+      
+      <div class="row my-4">
+        <div class="col-9 text-right total">
+         Total ₹:
+        </div>
+        
+        <div class="col-2 total-val">
+          <span id="total_value">0</span>
+        </div>
+      </div>
+      
+    </div>
+
+  </body> 
+</html>
