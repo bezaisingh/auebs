@@ -38,10 +38,11 @@ session_start();
     
 <body > <!--to align the entire content in centre-->
 
-    <img src="resources/logo.png" alt="Varsity Logo">      
-
-         <h2 align="center">AUEBS</h2>
-    <h3 align="center">All Bills List</h3>
+<div class="center-image">
+<img src="resources/logo.png" alt="Varsity Logo">
+<h2 align="center">All Bills List</h2>
+</div>
+  
 
     <div align="right" style="margin-right: 10px">
       <a href="printBillList.php">Print Pdf</a>
@@ -98,7 +99,7 @@ echo "<tr>
             <td>" . $row["consumer_name"]."</td>
             <td>" . $row["designation"]. "</td>
             <td>" . $row["dept"]. "</td>
-            <td>" . $row["bill_amt"] . "</td>
+            <td>" . $row["net_bill_amt"] . "</td>
             <td><a href = 'receipt.php?id=$row[id]'>Print Bill</td>
 
                     

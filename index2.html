@@ -1,0 +1,53 @@
+<html>
+   <title>User Login</title>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/navstyle2.css">
+  </head>
+<body>
+
+<!-- Navigation bar for navstyle2.css -->
+<div class="topnav">
+  <a class="active" href="#">Home</a>
+  <!-- <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a> -->
+  <a style="float:right" href="queryFiles/logout.php">Logout</a>
+</div>
+ <!-- Navigation bar for navstyle2.css ends here -->
+    
+ <div class=centre>
+            <img style= "margin-top: 50px" src="resources/logo.png" alt="Varsity Logo">  
+ </div>
+
+    <h2 align="center">AUEBS</h2>
+    <h3 align="center">User Login Page</h3>
+
+<br>
+   <form align="center" action="queryFiles/userlogin.php" method="POST">
+
+      Username
+      <br>
+      <input type="text" name="uid"> 
+      <br> <br>
+      Password
+      <br>
+      <input type="password" name="pwd">
+
+      <br> <br>
+
+<input style="width:150px" type="submit" value="Login" name="login" >
+ <br><br>
+<input style="width:150px" type="reset" value="Cancel">
+
+
+   </form>
+ 
+   <!-- <a href="#"><u><center>Click here to register</center> <br> -->
+
+<div class="footer">
+  <p>Copyright &copy AUEBS</p>
+</div>
+
+</body>
+
+</html>

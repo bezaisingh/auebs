@@ -1,59 +1,64 @@
-<html>
-   <title>User Login</title>
-    <head>
-        <link rel="stylesheet" type="text/css" href="css/navstyle2.css">
-      
-<!-- Navigation bar for navstyle.css -->
-        <!-- <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><a href="#about">Logout</a></li>
-       </ul> -->
-<!-- Navigation bar for navstyle.css ends here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  </head>
+<link rel="stylesheet" href="css/login.scss">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/navstyle2.css">
+      
+
+    <title>User Login</title>
+</head>
 <body>
-  <!-- <body align="center"> // to align the entire content in centre-->
 
 <!-- Navigation bar for navstyle2.css -->
 <div class="topnav">
-  <a class="active" href="#">Home</a>
-  <!-- <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a> -->
-  <a style="float:right" href="queryFiles/logout.php">Logout</a>
-</div>
- <!-- Navigation bar for navstyle2.css ends here -->
-    
- <div class=centre>
+    <a class="active" href="#">Home</a>
+    <!-- <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a> -->
+    <a style="float:right" href="queryFiles/logout.php">Logout</a>
+  </div>
+   <!-- Navigation bar for navstyle2.css ends here -->
+      
+
+
+    <div class="wrapper">
+
+<!--         <div class=centre>
             <img style= "margin-top: 50px" src="resources/logo.png" alt="Varsity Logo">  
-        </div>
+        </div> -->
+		
+		      <div class=center-image>
+        <img src="resources/logo.png" alt="Varsity Logo">  
+        <h2 align="center">AUEBS</h2>
+    </div>
 
-    <h2 align="center">AUEBS</h2>
+<!--     <h2 align="center">AUEBS</h2> -->
     
-    <h3 align="center">User Login Page</h3>
+    <!-- <h3 align="center">User Login Page</h3> -->
 
-<br>
-   <form align="center" action="queryFiles/userlogin.php" method="POST">
+        <form class="form-signin" action="queryFiles/userlogin.php" method="POST">       
+          <h3 class="form-signin-heading">User Login</h3>
+          Username <br>
+          <input type="text" class="form-control" name="uid" placeholder="Email Address" required="" autofocus="" />
+          <br>
+          Password <br>
+          <input type="password" class="form-control" name="pwd" placeholder="Password" required=""/>     
+          <br> 
+          <!-- <label class="checkbox">
+            <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+          </label> -->
+          <button class="btn btn-lg btn-primary btn-block" type="submit" value="Login" name="login">Login</button>   
+        </form>
+      </div>
 
-       Username : <input type="text" name="uid"> 
-       <br> <br>
-       Password : <input type="password" name="pwd">
 
-       <br> <br>
-
-<input style="width:150px" type="submit" value="Login" name="login" >
-  <br><br>
-<input style="width:150px" type="reset" value="Cancel">
-   </form>
- 
-   <!-- <a href="#"><u><center>Click here to register</center> <br> -->
-
-<div class="footer">
-  <p>Copyright &copy AUEBS</p>
-</div>
-
+      <div class="footer">
+        <p>Copyright &copy AUEBS</p>
+      </div>
 </body>
-
 </html>
