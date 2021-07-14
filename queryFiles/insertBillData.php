@@ -9,51 +9,22 @@ if(isset($_POST["save"]))
     $ConsumerName=$_POST["consumerName"];
     $MtrNo=$_POST["meterNo"];
     $QtrNo=$_POST["qtrNo"];
-    $Desig=$_POST["desig"];
-    $TariffCat=$_POST["tariffCat"];
-    $SupplyVoltLvl=$_POST["supplyVoltLvl"];    
-    $ConnectLoad=$_POST["connectLoad"];    
-    $BillAmt=$_POST["billAmt"];    
-    $BillNo=$_POST["billNo"];    
-    $BillPeriod=$_POST["billPeriod"];    
+    $TariffCat=$_POST["tariffCat"];   
     $BillDate=$_POST["billDate"];    
-    $NoOfDays=$_POST["noOfDays"];    
-    $MtrStatus=$_POST["mtrStatus"];    
-    $BillingStatus=$_POST["billingStatus"];    
-    $Address=$_POST["address"];    
-    $ReadingType=$_POST["readingType"];    
+    $StartDate=$_POST["startDate"];    
+    $EndDate=$_POST["endDate"];
+    $NoOfDays=$_POST["noOfDays"];       
     $PrevReading=$_POST["prevReading"];      
     $CurrentReading=$_POST["currentReading"];    
     $DiffInReading=$_POST["diffInReading"];    
-    $UnitsConsumed=$_POST["unitsConsumed"];    
-    $BillableUnits=$_POST["billableUnits"];    
-    $RecordDemand=$_POST["recordDemand"];    
-    $MaxDemand=$_POST["maxDemand"];    
-    $BillingDemad=$_POST["billingDemad"];    
-    $AvgPowFactor=$_POST["avgPowFactor"];    
-    $PowOnHrs=$_POST["powOnHrs"];    
-    $AvailPercent=$_POST["availPercent"];    
-    $CurrentDemand=$_POST["currentDemand"];    
-    $OutstandingDemand=$_POST["outstandingDemand"];    
-    $AdjAmt=$_POST["adjAmt"];    
-    $NetBillAmt=$_POST["netBillAmt"];    
-    $NetBillInWords=$_POST["netBillInWords"];    
-    $Rate=$_POST["rate"];    
-    $EnergyCharge=$_POST["energyCharge"];    
-    $TotEnergyCharge=$_POST["totEnergyCharge"];    
-    $DemandFixedCharge=$_POST["demandFixedCharge"];    
-    $ElectricityDuty=$_POST["electricityDuty"];    
-    $MtrRent=$_POST["mtrRent"];    
-    $ArrPrinciple=$_POST["arrPrinciple"];    
-    $ArrSurcharge=$_POST["arrSurcharge"];    
-    $CurrSurcharge=$_POST["currSurcharge"];    
-    $MiscArrear=$_POST["miscArrear"];    
-    $PayableAmtBfDueDate=$_POST["payableAmtBfDueDate"];    
-    $PayableAmtAfDueDate=$_POST["payableAmtAfDueDate"];    
-    $PrepBy=$_POST["prepBy"];    
-    $ConsumerCat=$_POST["consumerCat"];    
-    $StartDate=$_POST["startDate"];    
-    $EndDate=$_POST["endDate"];
+    $UnitsConsumed=$_POST["unitsConsumed"];       
+    $ArrearAmt=$_POST["arrearAmt"];   
+
+    $DueDate=$_POST["dueDate"];
+    $NetPayableAmt=$_POST["netPayAmt"];
+    $InstallmentAmt=$_POST["instAmt"];
+    $BalanceAmt=$_POST["balAmt"];
+
     
 if(!empty($_POST['meterNo'])){
     
@@ -69,107 +40,50 @@ if(!empty($_POST['meterNo'])){
     
 
         $sql="INSERT INTO bill_table(
-                                    meter_no,
-                                    qtr_no,
-                                    consumer_name,
-                                    tariff_category,
-                                    supply_volt_lvl,
-                                    connected_load,
-                                    bill_amt,
-                                    bill_no,
-                                    bill_period,
-                                    bill_date,
-                                    no_of_days,
-                                    meter_status,
-                                    biling_status,
-                                    address,
-                                    reading_type,
-                                    prev_reading,
-                                    current_reading,
-                                    diff_in_reading,
-                                    unit_consumed,
-                                    billable_units,
-                                    recorded_demand,
-                                    max_demand,
-                                    avg_pow_factor,
-                                    billing_demand,
-                                    pow_on_hrs,
-                                    avl_percent,
-                                    current_demand,
-                                    adj_amt,
-                                    net_bill_amt_,
-                                    net_bill_amt_in_wrds,
-                                    
-                                    rate,
-                                    energy_charge,
-                                    tot_energy_charge,
-                                    demand_fix_charge,
-                                    electricity_duty,
-                                    meter_rent,
-                                    arrear_principal,
-                                    arrear_surcharge,
-                                    current_surcharge,
-                                    misc_arrear,
-                                    payable_amt_bf_due,
-                                    payable_amt_af_due,
-                                    prepd_by,
-                                    consumer_category,
-                                    start_date,
-                                    end_date,
-                                    outstanding_demand
+                                     meter_no,
+                                     qtr_no,
+                                     consumer_name,
+                                     tariff_category,                                    
+                                     bill_date,
+                                      no_of_days,                                  
+                                      prev_reading,
+                                      current_reading,
+                                      diff_in_reading,
+                                      unit_consumed,                                  
+                                      arrear_amt,                                   
+                                      start_date,
+                                      end_date,
+                                      due_date,
+                                      net_bill_amt,
+                                      installment,
+                                      balance_amt
 
-        ) 
+                                    ) 
         
         VALUES (
             '$MtrNo',
             '$QtrNo',
             '$ConsumerName',
-            '$TariffCat',
-            '$SupplyVoltLvl',
-            '$ConnectLoad',
-            '$BillAmt',
-            '$BillNo',
-            '$BillPeriod',
+            '$TariffCat',   
+           
             '$BillDate',
             '$NoOfDays',
-            '$MtrStatus',            
-            '$BillingStatus',
-            '$Address',
-            '$ReadingType',
+                      
             '$PrevReading',
             '$CurrentReading',
             '$DiffInReading',
             '$UnitsConsumed',
-            '$BillableUnits',
-            '$RecordDemand',
-            '$MaxDemand',
-            '$AvgPowFactor',
-            '$BillingDemad',
-            '$PowOnHrs',            
-            '$AvailPercent',
-            '$CurrentDemand',
-            '$AdjAmt',
-            '$NetBillAmt',
-            '$NetBillInWords',
-            '$Rate',
-            '$EnergyCharge',
-            '$TotEnergyCharge',
-            '$DemandFixedCharge',
-            '$ElectricityDuty',
-            '$MtrRent',
-            '$ArrPrinciple',
-            '$ArrSurcharge',            
-            '$CurrSurcharge',
-            '$MiscArrear',
-            '$PayableAmtBfDueDate',
-            '$PayableAmtAfDueDate',
-            '$PrepBy',
-            '$ConsumerCat',
+           
+            '$ArrearAmt',
+           
             '$StartDate',
             '$EndDate',
-            '$OutstandingDemand'
 
-            
+            '$DueDate',
+            '$NetPayableAmt',
+            '$InstallmentAmt',
+            '$BalanceAmt'
+
             )";
            
             if($conn->query($sql)===TRUE)

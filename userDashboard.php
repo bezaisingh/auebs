@@ -82,7 +82,7 @@ $sql = "SELECT  id,
                 qtr_no,
                 consumer_name,
                 unit_consumed, 
-                net_bill_amt_   FROM bill_table where meter_no='$meter_no'";
+                net_bill_amt   FROM bill_table where meter_no='$meter_no'";
     
 $result = $conn->query($sql);
     
@@ -98,7 +98,7 @@ echo "<tr>
             <td>" . $row["qtr_no"]. "</td>
             <td>" . $row["consumer_name"]. "</td>
             <td>" . $row["unit_consumed"]. "</td>
-            <td>" . $row["net_bill_amt_"]. "</td>
+            <td>" . $row["net_bill_amt"]. "</td>
             <td><a href = 'receipt.php?id=$row[id]'>Print Bill</td>
             
       </tr>";

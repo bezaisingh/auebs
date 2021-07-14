@@ -1,6 +1,9 @@
 body{
 
     margin-top: 35px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
 }
 
 /* Style for Navigation bar starts here */
@@ -49,22 +52,50 @@ body{
         width: 100%;
         background-color: dimgray;
         color: white;
-        padding-left: 20px;
-/*        text-align: center;*/
+        color: white;
+        padding-top: 2px;
+        padding-bottom: 2px;
+       text-align: center;
   margin-top: 30px;
   font-weight: 100;
   clear: both;
+  font-family: unset;
       }
       
 /* Style for Footer ends here */
+
+/* Style for Footer */
+.footer1 {
+  
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: dimgray;
+  color: white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 100;
+  clear: both;
+}
+
+/* Style for Footer ends here */
       
-img {
-     border-radius: 8px;
-     padding: 5px;
-     margin-left: auto;
-     margin-right: auto;
-     display: block;
-    }
+.center-image{
+  display:flex;
+  justify-content:center; /* horizontally center */
+  align-items:center;    /* vertically center */
+  height:120px;
+  /* width:300px; */
+  margin-bottom: 5px;
+  background:whitesmoke;
+}
+
+.center-image img{
+ max-width:100%;
+ max-height:100%;
+}
 
 
 
@@ -98,4 +129,6 @@ tr:nth-child(even) {
 }
 
 /* CSS Code for Table displayed ends here */
+
+
       

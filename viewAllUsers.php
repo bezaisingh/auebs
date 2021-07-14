@@ -46,12 +46,13 @@ session_start();
 </div>
  <!-- Navigation bar for navstyle2.css ends here -->
            
-        <div style="margin-top: 50px" class=centre>
+        <div class="center-image">
             <img src="resources/logo.png" alt="Varsity Logo">  
+            <h2 align="center">All Users List</h2>
         </div>
    
     
-    <h3 align="center">All Users List</h3>
+    
     
     <!DOCTYPE html>
 <html>

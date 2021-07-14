@@ -73,9 +73,11 @@ form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+  grid: row gap 1px;
+  grid: column gap 1px;;
 }
 form label {
-  display: block;
+  display:ruby-base;
 }
 form p {
   margin: 0;

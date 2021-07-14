@@ -52,12 +52,12 @@ if($result !== false && $result->num_rows > 0){
     $consumer_name = $row["consumer_name"] ;
     $tariff_category = $row["tariff_category"] ;
     $bill_date = $row["bill_date"] ;
-    $meter_status = $row["meter_status"] ;
+    //$meter_status = $row["meter_status"] ;
     $unit_consumed = $row["unit_consumed"] ;
-    $net_bill_amt_ = $row["net_bill_amt_"] ;
+    $net_bill_amt = $row["net_bill_amt"] ;
     $start_date = $row["start_date"] ;
     $end_date = $row["end_date"] ;
-    $consumer_category = $row["consumer_category"] ;
+    //$consumer_category = $row["consumer_category"] ;
     $dept = $row["dept"] ;
     $designation = $row["designation"] ;
  
@@ -70,7 +70,7 @@ if($result !== false && $result->num_rows > 0){
 	$pdf->Cell(25, 7, $dept, 1, 0);
     $pdf->Cell(32, 7, $designation, 1, 0);
     $pdf->Cell(30, 7, $unit_consumed, 1, 0);
-    $pdf->Cell(25, 7, $net_bill_amt_, 1, 1);
+    $pdf->Cell(25, 7, $net_bill_amt, 1, 1);
 
         
     }

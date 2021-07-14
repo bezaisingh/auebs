@@ -1,4 +1,12 @@
 <?php
+
+// turn on error reporting
+error_reporting(1);
+ini_set('error_reporting', E_ALL);
+//debug session
+var_dump($_SESSION);
+
+
 include '../dbConn.php';
 
 if(isset($_POST["submit"]))

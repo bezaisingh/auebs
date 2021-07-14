@@ -1,0 +1,63 @@
+<html>   
+<head>   
+    <title> Calculate days between dates </title>   
+      <script>  
+       function daysDifference() {  
+         //define two variables and fetch the input from HTML form  
+         var startDate = document.getElementById("startDate").value;  
+         var endDate = document.getElementById("endDate").value;  
+  
+        //define two date object variables to store the date values  
+         var date1 = new Date(startDate);  
+         var date2 = new Date(endDate);  
+   
+        //calculate time difference  
+         var time_difference = date2.getTime() - date1.getTime();  
+  
+         //calculate days difference by dividing total milliseconds in a day  
+         var result = time_difference / (1000 * 60 * 60 * 24);  
+
+         //alert(result);
+
+         var noOfDays= document.getElementById("noOfDays").value = result;
+  
+         return document.getElementById("result").innerHTML =    
+              result + " days between both dates. ";  
+                    }  
+      </script>   
+      
+</head>    
+<body>   
+    
+    <h2 style="color: 32A80F" align="Center">    
+            Javatpoint : Calculate days between dates   
+        <br> <br> </h2>   
+    
+        <p align="Center"> <b> Enter date1   </b>   
+        <input type="date" id="startDate">   
+        <br> <br>   
+          
+        <p align="Center"> <b> Enter date2   </b>   
+        <input type="date" id="endDate" onchange="daysDifference()">   
+        <br> <br>       
+    
+        <!-- <button onclick="daysDifference()">   
+          Calculate number of days   
+        </button>    -->
+    </p>   
+
+    <h3 style="color:32A80F" id="result" align="center"></h3>  
+
+    <div class="row">
+        <div class="col-25">
+              <label for="">Number of Days</label>                          
+        </div>
+        <div class="col-75">
+            <input type="number" name="noOfDays" id="noOfDays" required>
+        </div>
+      </div>
+    
+ 
+    
+</body>    
+</html>  
