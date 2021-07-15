@@ -60,6 +60,7 @@ if ($_SESSION["meter_no"] == null){
 <table>
 <tr>
 <th>ID</th>
+<th>Bill Date</th>
 <th>Meter Number</th>
 <th>Quarter Number</th>
 <th>User Name</th>
@@ -78,6 +79,7 @@ $meter_no= $_SESSION["meter_no"];
     // echo '<br>';
     
 $sql = "SELECT  id,
+                bill_date,
                 meter_no,
                 qtr_no,
                 consumer_name,
@@ -94,6 +96,7 @@ if($result !== false && $result->num_rows > 0)
 while($row = $result->fetch_assoc()) {
 echo "<tr>
             <td>" . $row["id"] . "</td>
+            <td>" . $row["bill_date"] . "</td>
             <td>" . $row["meter_no"] . "</td>
             <td>" . $row["qtr_no"]. "</td>
             <td>" . $row["consumer_name"]. "</td>
