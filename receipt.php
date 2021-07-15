@@ -91,6 +91,21 @@ if($result !== false && $result->num_rows > 0){
     // $payable_amt_af_due = $row["payable_amt_af_due"] ;
     // $prepd_by = $row["prepd_by"] ;
     // $billing_demand = $row["billing_demand"] ;
+
+    $sl1unit = $row["sl1unit"] ;
+    $sl2unit = $row["sl2unit"] ;
+    $sl3unit = $row["sl3unit"] ;
+
+    $sl1price = $row["sl1price"] ;
+    $sl2price = $row["sl2price"] ;
+    $sl3price = $row["sl3price"] ;
+
+    $total_energy_charge=$row["total_energy_charge"];
+    $due_date=$row["due_date"];
+    $arrear_amt=$row["arrear_amt"];
+    $installment=$row["installment"];
+    $balance_amt=$row["balance_amt"];
+
  
 }
 }
@@ -106,61 +121,147 @@ $pdf->AddPage();
  // Move to the right
  $pdf->Cell(80);
  // Title
- $pdf->Cell(55,10,'Bill Receipt',1,0,'C');
+
+//  $pdf->Cell(40,10,'Bill Receipt',1,0,'C'); //Heading With Borders
+ $pdf->Ln(0);
+ $pdf->Cell(0,8,'Assam University, Silchar',0,2,'C');
+
+ $pdf->Ln(0);
+ $pdf->Cell(0,8,'Electricity Bill Receipt',0,0,'C');
  // Line break
- $pdf->Ln(20);
+ $pdf->Ln(12);
 
 $pdf->SetFont('Arial', '', 12);
 $pdf->Line(10, 30, 200, 30); //The 1st Long Horizontal Line line
 
 $pdf->Ln(1);
-$pdf->Cell(55, 5, 'Meter No', 0, 0);
-$pdf->Cell(58, 5, ': '.$meter_no, 0, 0);
+$pdf->Cell(50, 5, 'Bill Date', 0, 0);
+$pdf->Cell(50, 5, ': '.$bill_date, 0, 0);
 
-$pdf->Cell(55, 5, 'Quarter No', 0, 0);
-$pdf->Cell(52, 5, ': '.$qtr_no, 0, 1);
+$pdf->Cell(40, 5, 'Bill Period', 0, 0);
+$pdf->Cell(25, 5, ': '.$start_date, 0, 0);
+$pdf->Cell(25, 5, '- '.$end_date, 0, 1);
 
-$pdf->Cell(55, 5, 'Consumer Name', 0, 0);
-$pdf->Cell(58, 5, ': '.$consumer_name, 0, 0);
 
-//$pdf->Cell(55, 5, 'Tariff Category', 0, 0);
-//$pdf->Cell(52, 5, ': '.$tariff_category, 0, 1);
+$pdf->Cell(50, 5, 'Meter No', 0, 0);
+$pdf->Cell(50, 5, ': '.$meter_no, 0, 0);
 
-//$pdf->Cell(55, 5, 'Address', 0, 0);
-//$pdf->Cell(58, 5, ': '.$address, 0, 0);
+$pdf->Cell(40, 5, 'No. of days', 0, 0);
+$pdf->Cell(25, 5, ': '.$no_of_days, 0, 1);
 
-$pdf->Cell(55, 5, 'Bill Date', 0, 0);
-$pdf->Cell(52, 5, ': '.$bill_date, 0, 1);
 
-$pdf->Ln(0);
+$pdf->Cell(50, 5, 'Consumer Name', 0, 0);
+$pdf->Cell(50, 5, ': '.$consumer_name, 0, 1);
+
+$pdf->Cell(50, 5, 'Quarter No', 0, 0);
+$pdf->Cell(50, 5, ': '.$qtr_no, 0, 1);
+
+$pdf->Cell(50, 5, 'Address', 0, 0);
+$pdf->Cell(58, 5, ': Assam University, Silchar, Cachar, Assam', 0, 1);
+
+
+$pdf->Ln(2);
 //$pdf->Cell(55, 5, 'Meter Status', 0, 0);
 //$pdf->Cell(58, 5, ': '.$meter_status, 0, 1);
 
-$pdf->Line(10, 62, 200, 62); //The 2nd Long Horizontal Line line
+$pdf->Line(10, 56, 200, 56); //The 2nd Long Horizontal Line line
 
-$pdf->Cell(55, 5, 'Unit Consumed', 0, 0);
-$pdf->Cell(58, 5, ': '.$unit_consumed, 0, 1);
+$pdf->Cell(50, 5, 'Tariff Category', 0, 0);
+$pdf->Cell(50, 5, ': '.$tariff_category, 0, 1);
 
-$pdf->Cell(55, 5, 'Net Bill Amount', 0, 0);
-$pdf->Cell(58, 5, ': '.$net_bill_amt, 0, 1);
+$pdf->Cell(50, 5, 'Previous Reading', 0, 0);
+$pdf->Cell(50, 5, ': '.$prev_reading, 0, 0);
+
+$pdf->Cell(50, 5, 'Current Reading', 0, 0);
+$pdf->Cell(50, 5, ': '.$current_reading, 0, 1);
+
+$pdf->Cell(50, 5, 'Difference in Reading', 0, 0);
+$pdf->Cell(50, 5, ': '.$diff_in_reading, 0, 0);
+
+$pdf->Cell(50, 5, 'Units Consumed', 0, 0);
+$pdf->Cell(50, 5, ': '.$unit_consumed, 0, 1);
 
 $pdf->Ln(2);
-$pdf->Cell(55, 5, 'Start Date', 0, 0);
-$pdf->Cell(58, 5, ': '.$start_date, 0, 1);
+
+$pdf->SetFont('Arial','B',12); // to make the below Content Bold
+$pdf->Cell(50, 5, 'Billing Details', 0, 1);
+
+$pdf->Cell(40,10,'Slabs',1,0,'C');
+$pdf->Cell(40,10,'Units',1,0,'C');
+$pdf->Cell(20,10,'Rate',1,0,'C');
+$pdf->Cell(40,10,'Amount',1,1,'C');
+
+$pdf->SetFont('Arial', '', 12);// to make the below Content Simple - i.e No Bold or Italics
+
+$pdf->Cell(40,8,'Slab 1',1,0,'C');
+$pdf->Cell(40,8,'' .$sl1unit,1,0,'C');
+$pdf->Cell(20,8,'5.40',1,0,'C');
+$pdf->Cell(40,8,''.$sl1price,1,1,'C');
+
+$pdf->Cell(40,8,'Slab 2',1,0,'C');
+$pdf->Cell(40,8,''.$sl2unit,1,0,'C');
+$pdf->Cell(20,8,'6.65',1,0,'C');
+$pdf->Cell(40,8,''.$sl2price,1,1,'C');
+
+$pdf->Cell(40,8,'Slab 3',1,0,'C');
+$pdf->Cell(40,8,''.$sl3unit,1,0,'C');
+$pdf->Cell(20,8,'7.65',1,0,'C');
+$pdf->Cell(40,8,''.$sl3price,1,1,'C');
+
+$pdf->Cell(40,8,'Meter Rent',1,0,'C');
+$pdf->Cell(40,8,'-',1,0,'C');
+$pdf->Cell(20,8,'-',1,0,'C');
+$pdf->Cell(40,8,'40',1,1,'C');
+
+$pdf->Cell(40,8,'Total Energy Charge',1,0,'C');
+$pdf->Cell(40,8,''.$unit_consumed,1,0,'C');
+$pdf->Cell(20,8,'-',1,0,'C');
+$pdf->Cell(40,8,''.$total_energy_charge,1,1,'C');
+
+$pdf->Ln(2);
+$pdf->Line(10, 140, 200, 140); //The 3rd Long Horizontal Line line
+
+$pdf->Ln(2);
+$pdf->Cell(50, 5, 'Due Date', 0, 0);
+$pdf->Cell(50, 5, ': '. $due_date, 0, 1);
+
+$pdf->Ln(2);
+
+$pdf->Cell(50, 5, 'Arrear Amount', 0, 0);
+$pdf->Cell(50, 5, ': '.$arrear_amt, 0, 1);
+
+$pdf->Ln(2);
+
+$pdf->Cell(50, 5, 'Net Bill Amount', 0, 0);
+$pdf->Cell(50, 5, ': '.$net_bill_amt, 0, 1);
+
+$pdf->Ln(2);
+
+$pdf->Cell(50, 5, 'Amount/Instalment Paid', 0, 0);
+$pdf->Cell(50, 5, ': '.$installment, 0, 1);
+
+$pdf->Ln(2);
+
+$pdf->Cell(50, 5, 'Balance Amount', 0, 0);
+$pdf->Cell(50, 5, ': '.$balance_amt, 0, 1);
+
+$pdf->Ln(2);
+// $pdf->Cell(55, 5, 'Start Date', 0, 0);
+// $pdf->Cell(58, 5, ': '.$start_date, 0, 1);
 
 $pdf->Ln(0);//Line break
-$pdf->Cell(55, 5, 'End Date', 0, 0);
-$pdf->Cell(58, 5, ': '.$end_date, 0, 1);
+// $pdf->Cell(55, 5, 'End Date', 0, 0);
+// $pdf->Cell(58, 5, ': '.$end_date, 0, 1);
 
 // $pdf->Line(155, 75, 195, 75); //The 1st Short Horizontal Line line
 
-$pdf->Line(10, 88, 200, 88); //The 3rd Long Horizontal Line line
+
 $pdf->Ln(0);//Line break
 //$pdf->Cell(55, 5, 'Consumer Category', 0, 0);
 //$pdf->Cell(58, 5, ': '.$consumer_category, 0, 1);
 
-$pdf->Cell(55, 5, 'Tariff Category', 0, 0);
-$pdf->Cell(58, 5, ': '.$tariff_category, 0, 1);
+// $pdf->Cell(55, 5, 'Tariff Category', 0, 0);
+// $pdf->Cell(58, 5, ': '.$tariff_category, 0, 1);
 
 //$pdf->Cell(55, 5, 'Supply Voltage Level', 0, 0);
 //$pdf->Cell(58, 5, ': '.$supply_volt_lvl, 0, 0);
@@ -172,8 +273,8 @@ $pdf->Ln(1);//Line break
 //$pdf->Cell(55, 5, 'Bill Period', 0, 0);
 //$pdf->Cell(58, 5, ': '.$bill_period, 0, 0);
 
-$pdf->Cell(55, 5, 'No. of days', 0, 0);
-$pdf->Cell(52, 5, ': '.$no_of_days, 0, 1);
+// $pdf->Cell(55, 5, 'No. of days', 0, 0);
+// $pdf->Cell(52, 5, ': '.$no_of_days, 0, 1);
 
 //$pdf->Cell(55, 5, 'Billing Status', 0, 0);
 //$pdf->Cell(58, 5, ': '.$biling_status, 0, 0);
@@ -183,17 +284,7 @@ $pdf->Cell(52, 5, ': '.$no_of_days, 0, 1);
 //$pdf->Cell(55, 5, 'Reading Type', 0, 0);
 //$pdf->Cell(52, 5, ': '.$reading_type, 0, 1);
 
-$pdf->Cell(55, 5, 'Previous Reading', 0, 0);
-$pdf->Cell(58, 5, ': '.$prev_reading, 0, 0);
 
-$pdf->Cell(55, 5, 'Current Reading', 0, 0);
-$pdf->Cell(52, 5, ': '.$current_reading, 0, 1);
-
-$pdf->Cell(55, 5, 'Difference in Reading', 0, 0);
-$pdf->Cell(58, 5, ': '.$diff_in_reading, 0, 0);
-
-$pdf->Cell(55, 5, 'Units Consumed', 0, 0);
-$pdf->Cell(52, 5, ': '.$unit_consumed, 0, 1);
 
 //$pdf->Cell(55, 5, 'Billable Units', 0, 0);
 //$pdf->Cell(58, 5, ': '.$billable_units, 0, 0);
@@ -261,8 +352,8 @@ $pdf->Cell(52, 5, ': '.$unit_consumed, 0, 1);
 //$pdf->Cell(55, 5, 'Billig Demand', 0, 0);
 //$pdf->Cell(52, 5, ': '.$billing_demand, 0, 1);
 
-$pdf->Line(10, 165, 200, 165); //The 4th Long Horizontal Line line
-//$pdf->Cell(165, 10, 'Prepared by: '.$prepd_by, 0, 0,'R');
+$pdf->Line(10, 170, 200, 170); //The 4th Long Horizontal Line line
+$pdf->Cell(130, 10, 'Prepared by: Engineering Section', 0, 0,'R');
 // $pdf->Cell(58, 5, ': '.$prepd_by, 0, 1);
 
 $pdf->Output();

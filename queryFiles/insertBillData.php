@@ -25,6 +25,15 @@ if(isset($_POST["save"]))
     $InstallmentAmt=$_POST["instAmt"];
     $BalanceAmt=$_POST["balAmt"];
 
+    $Slab1Units=$_POST["slab1_units"];
+    $Slab1Price=$_POST["slab1_price"];
+    $Slab2Units=$_POST["slab2_units"];
+    $Slab2Price=$_POST["slab2_price"];
+    $Slab3Units=$_POST["slab3_units"];
+    $Slab3Price=$_POST["slab3_price"];
+
+    $TotalEnergyCharge=$_POST["total_value"];
+
     
 if(!empty($_POST['meterNo'])){
     
@@ -54,9 +63,16 @@ if(!empty($_POST['meterNo'])){
                                       start_date,
                                       end_date,
                                       due_date,
+                                      total_energy_charge,
                                       net_bill_amt,
                                       installment,
-                                      balance_amt
+                                      balance_amt,
+                                      sl1unit,
+                                      sl1price,
+                                      sl2unit,
+                                      sl2price,
+                                      sl3unit,
+                                      sl3price
 
                                     ) 
         
@@ -80,9 +96,18 @@ if(!empty($_POST['meterNo'])){
             '$EndDate',
 
             '$DueDate',
+            $TotalEnergyCharge,
             '$NetPayableAmt',
             '$InstallmentAmt',
-            '$BalanceAmt'
+            '$BalanceAmt',
+
+            '$Slab1Units',
+            '$Slab1Price',
+            '$Slab2Units',
+            '$Slab2Price',
+            '$Slab3Units',
+            '$Slab3Price'
+            
 
             )";
            
