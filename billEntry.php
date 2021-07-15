@@ -270,10 +270,10 @@ if(isset($_GET["message"]))
           1. Slab 1
         </div>
         <div class="col-25">
-          <input type="number" value="0" class="qty" id="slab1_units"/>
+          <input type="number" value="0" class="qty" name="slab1_units" id="slab1_units"/>
         </div>
         <div class="col-25">
-          <input type="number" readonly value="0" id="slab1_price"/>
+          <input type="number" readonly value="0" name="slab1_price" id="slab1_price"/>
         </div>
       </div>
       
@@ -282,10 +282,10 @@ if(isset($_GET["message"]))
           2. Slab 2
         </div>
         <div class="col-25">
-          <input type="number" value="0" class="qty" id="slab2_units"/>
+          <input type="number" value="0" class="qty" name="slab2_units" id="slab2_units"/>
         </div>
         <div class="col-25">
-          <input type="number" readonly value="0" id="slab2_price"/>
+          <input type="number" readonly value="0" name="slab2_price" id="slab2_price"/>
         </div>
       </div>
       
@@ -294,10 +294,10 @@ if(isset($_GET["message"]))
           3. Slab 3
         </div>
         <div class="col-25">
-          <input type="number" class="qty" value="0" id="slab3_units"/>
+          <input type="number" class="qty" value="0" name="slab3_price" id="slab3_units"/>
         </div>
         <div class="col-25">
-          <input type="number" readonly value="0" id="slab3_price"/>
+          <input type="number" readonly value="0" name="slab3_price" id="slab3_price"/>
         </div>
       </div>
       
@@ -334,7 +334,7 @@ if(isset($_GET["message"]))
         </div>
         
         <div class="col-25">
-          <input type="number" value="0" id="total_value" readonly>
+          <input type="number" value="0" name="total_value" id="total_value" readonly>
           <!-- <span id="total_value">0</span> -->
         </div>
       </div>
