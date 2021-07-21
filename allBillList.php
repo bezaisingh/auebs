@@ -7,6 +7,11 @@
 // start session
 session_start();
 
+if ($_SESSION["uid"] == null){
+
+    header("location:./admin.html");
+  }
+
 // debug session
 // var_dump($_SESSION);
 // echo '<br>';

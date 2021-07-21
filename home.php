@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if ($_SESSION["uid"] == null){
+
+  header("location:./admin.html");
+}
+
+?>
+
+
 <html>
   <title>Home</title>
   <head>

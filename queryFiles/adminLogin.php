@@ -20,7 +20,7 @@
                 
              echo   '<script type="text/javascript"> 
                         alert("Wrong Credentials.. Try again!!!"); 
-                        window.location.href = "../index.html";
+                        window.location.href = "../admin.html";
                         </script>';
 			}
 				mysqli_close($conn);

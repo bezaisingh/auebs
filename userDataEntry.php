@@ -1,14 +1,23 @@
 <?php
 
+session_start();
+
+if ($_SESSION["uid"] == null){
+
+  header("location:./admin.html");
+}
+
 if(isset($_GET["message"]))
 {
     $message=$_GET["message"];
-    echo $message;
+    //echo $message;
     echo "
     <script type=\"text/javascript\">
     alert('User data entered successfully');
     </script>";  
 }
+
+setcookie('uid', '',time() - 3600);
 
 ?>
 
@@ -40,7 +49,7 @@ if(isset($_GET["message"]))
     
 
 <div class="container">
-  <form action="queryFiles/addUser.php" method="POST">
+  <form name="form1" action="queryFiles/addUser.php" method="POST">
   
   <div class="row">
     <div class="col-25">
@@ -102,8 +111,9 @@ if(isset($_GET["message"]))
         <label for="">Mobile Number</label>                  
     </div>
     <div class="col-75">
-        <input name="mobno" type = "tel" placeholder="10 digit Number only" 
-        pattern="[6-9]{1}[0-9]{3}[0-9]{3}[0-9]{3}" maxlength = "10" required/>    
+        <!-- <input name="mobno" type = "tel" placeholder="10 digit Number only" 
+        pattern="[6-9]{1}[0-9]{3}[0-9]{3}[0-9]{3}" maxlength = "10" required/>     -->
+        <input id="mobno" name="mobno" type="text" onkeypress="return isNumber(event)" onchange="ValidateNo()" required/>
     </div>
   </div>
 
@@ -169,5 +179,7 @@ if(isset($_GET["message"]))
 </div>
 
 </body>
+
+<script text="text/javascript" src="js/functions.js"></script>
 
 </html>

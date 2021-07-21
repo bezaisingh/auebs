@@ -4,7 +4,7 @@
 error_reporting(1);
 ini_set('error_reporting', E_ALL);
 //debug session
-var_dump($_SESSION);
+//var_dump($_SESSION);
 
 
 include '../dbConn.php';
@@ -31,6 +31,8 @@ $Email=$_POST["email"];
 $Uid=$_POST["uid"];
 
 $Pwd=$_POST["pwd"];
+
+$Remark=$_POST["remark"];
     
 if(!empty($_POST['uid'])){
     
@@ -45,7 +47,30 @@ if(!empty($_POST['uid'])){
        else {
     
 
-        $sql="INSERT INTO users_table(fname, lname, meter_no, qtr_no, designation, dept, mob_no, email, uid, pwd) VALUES ('$Fname','$Lname','$MtrNo','$QtrNo','$Desig','$Dept', '$MobNo', '$Email','$Uid','$Pwd')";
+        $sql="INSERT INTO users_table(fname,
+                                         lname, 
+                                         meter_no, 
+                                         qtr_no, 
+                                         designation, 
+                                         dept, 
+                                         mob_no, 
+                                         email, 
+                                         uid, 
+                                         pwd, 
+                                         remarks
+                                         ) 
+                                         
+                                         VALUES ('$Fname',
+                                                    '$Lname',
+                                                    '$MtrNo',
+                                                    '$QtrNo',
+                                                    '$Desig',
+                                                    '$Dept', 
+                                                    '$MobNo',
+                                                    '$Email',
+                                                    '$Uid',
+                                                    '$Pwd',
+                                                    '$Remark')";
             if($conn->query($sql)===TRUE)
                 {
                     echo"Record Inserted Successfully";

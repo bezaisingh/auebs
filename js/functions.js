@@ -136,7 +136,7 @@ function calculateTotal()
 $(function()
  {
 
-  jQuery('.qty').change(calculateTotal).keyup(calculateTotal);
+  jQuery('.qty').change(calculateTotal, net_Pay_Amt).keyup(calculateTotal, net_Pay_Amt);
 
    // $(".qty").on("change keyup",calculateTotal) // Original
    // $(".qty").on("keyup change",calculateTotal) // Tried on 12th July 2021 It Works
@@ -166,7 +166,7 @@ function daysDifference() {
 
   //alert(result);
 
-  var noOfDays= document.getElementById("noOfDays").value = result;
+  var noOfDays= document.getElementById("noOfDays").value = result + 1;
 
   //To check No of days from bill period  -->
   // return document.getElementById("result").innerHTML =    
@@ -251,10 +251,61 @@ $(function()
 
   jQuery('.dynamic').change(net_Pay_Amt).keyup(net_Pay_Amt);
 
-   // $(".qty").on("change keyup",calculateTotal) // Original
+    $(".qty").on("change keyup",net_Pay_Amt, calculateTotal) // Original
    // $(".qty").on("keyup change",calculateTotal) // Tried on 12th July 2021 It Works
 
 })
 
 
+// ---------------------------------------------------------------------------------------------
+
+// <!-- javascript code for Phone Number Validation starts here -->
+function isNumber(evt) {
+  evt = (evt) ? evt : window.event;
+  var charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    alert("Please enter only Numbers.");
+    return false;
+  }
+
+  return true;
+}
+
+function ValidateNo() {
+  var phoneNo = document.getElementById('mobno');
+
+  if (phoneNo.value == "" || phoneNo.value == null) {
+    alert("Please enter your Mobile No.");
+    return false;
+  }
+  if (phoneNo.value.length < 10 || phoneNo.value.length > 10) {
+    alert("Mobile No. is not valid, Please Enter 10 Digit Mobile No.");
+    phoneNo.value=null;
+    return false;
+  }
+
+  // alert("Mobile No is correct ");
+  return true;
+}
+
+// <!-- javascript code for Phone Number Validation ends here -->
+// ---------------------------------------------------------------------------------------------
+
+
+
+
+// <!-- javascript code to fix floating Number upto 2 decimal places Starts here -->
+$(document).ready(function () {
+  $(".floatNumberField").change(function() {
+      $(this).val(parseFloat($(this).val()).toFixed(2));
+  });
+});
+// <!-- javascript code to fix floating Number upto 2 decimal places ends here -->
+// ---------------------------------------------------------------------------------------------
+
+function callMultiFunctioins() {
+  calculateTotal();
+  dfferece_in_readings();
+  net_Pay_Amt();
+}
 

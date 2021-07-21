@@ -7,6 +7,10 @@ ini_set('error_reporting', E_ALL);
 // start session
 session_start();
 
+if(isset($_COOKIE['meter_no'])):
+  setcookie('meter_no', '', time()-7000000, '/');
+endif;
+
 if ($_SESSION["meter_no"] == null){
 
   header("location:./index.html");
@@ -47,7 +51,7 @@ if ($_SESSION["meter_no"] == null){
  <!--  <a href="#news">News</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a> -->
-  <a style="float:right" href="queryFiles/logout.php">Logout</a>
+  <a style="float:right" href="queryFiles/userLogout.php">Logout</a>
 </div>
  <!-- Navigation bar for navstyle2.css ends here -->
            

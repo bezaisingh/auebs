@@ -10,6 +10,14 @@ if(isset($_GET["message"]))
     </script>";    
 }
 
+session_start();
+
+if ($_SESSION["uid"] == null){
+
+  header("location:./admin.html");
+}
+
+
 ?>
 
 <html>
@@ -186,7 +194,10 @@ if(isset($_GET["message"]))
           <label for="">Current Reading</label>          
     </div>
     <div class="col-75">
-          <input type="number" name="currentReading" id="currentReading" onchange="dfferece_in_readings()" onchange="calculateTotal()" onchange="net_Pay_Amt()" required>              
+          <!-- <input class="qty" type="number" name="currentReading" id="currentReading" onchange="dfferece_in_readings(), net_pay_amt()" onchange="calculateTotal()" onchange="net_Pay_Amt()" required> 
+                      -->
+                      <input class="qty" type="number" name="currentReading" id="currentReading" onchange="callMultiFunctioins()" required>              
+
     </div>
   </div>
 
@@ -318,7 +329,7 @@ if(isset($_GET["message"]))
           Fixed Charges & Meter Rent
         </div>
         <div class="col-25">
-          <input type="number" class="qty" readonly value="1" id="fixedChargesUnits"/>
+          <input type="number" class="qty" readonly id="fixedChargesUnits"/>
         </div>
         <div class="col-25">
           <input type="number" readonly value="40" id="fixedChargesPrice"/>
@@ -334,7 +345,7 @@ if(isset($_GET["message"]))
         </div>
         
         <div class="col-25">
-          <input type="number" value="0" name="total_value" id="total_value" readonly>
+          <input type="number" class="floatNumberField" step="0.01" value="0.00" name="total_value" id="total_value" readonly>
           <!-- <span id="total_value">0</span> -->
         </div>
       </div>
@@ -433,7 +444,7 @@ if(isset($_GET["message"]))
           <label for="Adjustment Amount">Arrear Amount</label>                      
     </div>
     <div class="col-75">
-          <input type="number" step="any" class="dynamic" name="arrearAmt" id="arrearAmt" onchange="net_Pay_Amt()" required>  <!-- NOTE: Column to be Renamed to arrear_amt in DB -->
+          <input type="number" step="0.01" class="qty" name="arrearAmt" id="arrearAmt" onchange="net_Pay_Amt()" required>  <!-- NOTE: Column to be Renamed to arrear_amt in DB -->
     </div>
   </div>
 
@@ -442,7 +453,7 @@ if(isset($_GET["message"]))
           <label for="">Net Payable Amount</label>                      
     </div>
     <div class="col-75">
-          <input type="number" class="dynamic" name="netPayAmt" id="netPayAmt" readonly>  <!-- NOTE: New Column to be added in DB -->
+          <input type="number" class="qty" name="netPayAmt" id="netPayAmt" readonly>  <!-- NOTE: New Column to be added in DB -->
     </div>
   </div>
 
@@ -451,7 +462,7 @@ if(isset($_GET["message"]))
           <label for="">Installment Amount(if any)</label>                      
     </div>
     <div class="col-75">
-          <input type="number" class="dynamic" name="instAmt" id="instAmt" onchange="balanceCalc()" required>  <!-- NOTE: New Column to be added in DB -->
+          <input type="number" step="0.01" class="dynamic" name="instAmt" id="instAmt" onchange="balanceCalc()" required>  <!-- NOTE: New Column to be added in DB -->
     </div>
   </div>
 
